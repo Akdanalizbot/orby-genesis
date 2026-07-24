@@ -83,11 +83,11 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="#"
-            className="rounded-full border border-white/15 bg-white/5 px-10 py-4 font-semibold text-white backdrop-blur-xl transition duration-300 hover:border-cyan-400 hover:bg-cyan-400/10"
-          >
-            Explore Universe
-          </Link>
+  href="/whitepaper"
+  className="rounded-full border border-white/15 bg-white/5 px-10 py-4 font-semibold text-white backdrop-blur-xl transition duration-300 hover:border-cyan-400 hover:bg-cyan-400/10"
+>
+  Read Genesis Paper
+</Link>
 
         </div>
 
