@@ -23,7 +23,7 @@ export default function Vision() {
         <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-gray-400">
           ORBY is more than a project.
           <br />
-          It's a growing universe built by explorers,
+         It&apos;s a growing universe built by explorers,
           creators and believers.
           <br />
           Join us and help shape the future.
