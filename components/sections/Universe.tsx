@@ -92,7 +92,7 @@ export default function Universe() {
             </h3>
 
             <p className="leading-8 text-zinc-400">
-              ORBY Genesis is designed to evolve beyond today's expectations,
+              ORBY Genesis is designed to evolve beyond today&apos;s expectations,   
               unlocking new experiences, technologies, and opportunities for
               every generation of the community.
             </p>
