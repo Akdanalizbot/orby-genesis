@@ -1,64 +1,97 @@
-import Container from "@/components/ui/Container";
-import SectionTitle from "@/components/ui/SectionTitle";
-
-const roadmap = [
-  {
-    phase: "Phase 1",
-    title: "Genesis",
-    description:
-      "Build the brand identity, website and the foundation of the ORBY universe.",
-  },
-  {
-    phase: "Phase 2",
-    title: "Community",
-    description:
-      "Grow a loyal community through storytelling, creativity and engagement.",
-  },
-  {
-    phase: "Phase 3",
-    title: "Launch",
-    description:
-      "Launch ORBY on Robinhood Chain with a strong community behind it.",
-  },
-  {
-    phase: "Phase 4",
-    title: "Expansion",
-    description:
-      "Expand the ecosystem with partnerships, utilities and new experiences.",
-  },
-];
-
 export default function Roadmap() {
+  const missions = [
+    {
+      id: "01",
+      title: "Genesis",
+      status: "Completed",
+      description:
+        "Build the ORBY identity, establish the brand and launch the first explorer.",
+    },
+    {
+      id: "02",
+      title: "Community Expansion",
+      status: "In Progress",
+      description:
+        "Grow a loyal global community and create a strong presence across Web3.",
+    },
+    {
+      id: "03",
+      title: "Ecosystem",
+      status: "Coming Soon",
+      description:
+        "Launch utilities, partnerships and products that strengthen the ORBY universe.",
+    },
+    {
+      id: "04",
+      title: "Beyond Robinhood",
+      status: "Future",
+      description:
+        "Expand the ORBY universe and connect explorers across multiple ecosystems.",
+    },
+  ];
+
   return (
-    <section className="bg-[#050816] py-32">
-      <Container>
-        <SectionTitle
-          eyebrow="ROADMAP"
-          title="Building Step by Step"
-          description="Great projects aren't rushed. Every milestone strengthens the foundation."
-        />
+    <section
+      id="roadmap"
+      className="relative overflow-hidden bg-[#040712] px-6 py-32"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#06b6d415,transparent_70%)]" />
 
-        <div className="space-y-8">
-          {roadmap.map((item) => (
+      <div className="relative z-10 mx-auto max-w-6xl">
+
+        <div className="text-center">
+
+          <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 text-xs uppercase tracking-[0.45em] text-cyan-300">
+            Mission Timeline
+          </span>
+
+          <h2 className="mt-8 text-5xl font-black text-white md:text-7xl">
+            The Journey Ahead
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-gray-400">
+            Every great universe is built mission by mission.
+          </p>
+
+        </div>
+
+        <div className="mt-24 space-y-8">
+
+          {missions.map((mission) => (
             <div
-              key={item.phase}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition hover:border-cyan-400/40"
+              key={mission.id}
+              className="rounded-3xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:border-cyan-400/40 hover:bg-white/10"
             >
-              <p className="text-sm uppercase tracking-[0.3em] text-cyan-400">
-                {item.phase}
-              </p>
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
 
-              <h3 className="mt-2 text-3xl font-bold text-white">
-                {item.title}
-              </h3>
+                <div>
 
-              <p className="mt-4 leading-8 text-slate-400">
-                {item.description}
-              </p>
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">
+                    Mission {mission.id}
+                  </p>
+
+                  <h3 className="mt-2 text-3xl font-bold text-white">
+                    {mission.title}
+                  </h3>
+
+                  <p className="mt-4 max-w-2xl leading-8 text-gray-400">
+                    {mission.description}
+                  </p>
+
+                </div>
+
+                <div className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 text-sm font-semibold text-cyan-300">
+                  {mission.status}
+                </div>
+
+              </div>
+
             </div>
           ))}
+
         </div>
-      </Container>
+
+      </div>
     </section>
   );
 }
