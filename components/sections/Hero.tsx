@@ -1,243 +1,261 @@
-"use client";
+{/* LEFT */}
 
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
+<div className="flex-1 text-center lg:text-left">
 
-export default function Hero() {
-  return (
-    <section className="relative overflow-hidden bg-[#050816] text-white">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-cyan-300">
+      🚀 Born on Robinhood Chain
+    </span>
+  </motion.div>
 
-      {/* Background */}
-      <div className="absolute inset-0">
+  <motion.h1
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.15 }}
+    className="mt-10 text-7xl font-black leading-[0.9] md:text-[110px]"
+  >
+    ORBY
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#7c3aed22,transparent_45%)]" />
+    <span className="block bg-gradient-to-r from-cyan-300 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+      GENESIS
+    </span>
+  </motion.h1>
 
-        <div className="absolute right-0 top-20 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[140px]" />
+  <motion.p
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.3 }}
+    className="mt-8 max-w-xl text-xl leading-9 text-zinc-300"
+  >
+    More than a token.
 
-        <div className="absolute left-0 bottom-0 h-[500px] w-[500px] rounded-full bg-purple-600/10 blur-[160px]" />
+    <br />
 
+    A living universe powered by community,
+    imagination and long-term vision.
+  </motion.p>
+  {/* RIGHT */}
+
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.3 }}
+  className="relative flex flex-1 items-center justify-center"
+>
+
+  {/* Glow */}
+
+  <div className="absolute h-[650px] w-[650px] rounded-full bg-gradient-to-r from-cyan-500/20 via-purple-500/25 to-pink-500/20 blur-[140px]" />
+
+  {/* Floating Ring */}
+
+  <div className="absolute h-[540px] w-[540px] rounded-full border border-cyan-400/20" />
+
+  <div className="absolute h-[420px] w-[420px] rounded-full border border-purple-400/20" />
+
+  {/* ORBI */}
+
+  <motion.div
+    animate={{
+      y: [0, -18, 0],
+      rotate: [0, 2, 0, -2, 0],
+    }}
+    transition={{
+      duration: 8,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="relative z-20"
+  >
+    <Image
+      src="/images/orbi.png"
+      alt="Orbi"
+      width={650}
+      height={650}
+      priority
+      className="drop-shadow-[0_0_80px_rgba(124,58,237,0.65)]"
+    />
+  </motion.div>
+
+  {/* TOP CARD */}
+
+  <div className="orby-card absolute left-0 top-10 rounded-2xl px-5 py-4 backdrop-blur-xl">
+    <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
+      Community
+    </p>
+
+    <h3 className="mt-2 text-2xl font-bold">
+      100%
+    </h3>
+  </div>
+
+  {/* RIGHT CARD */}
+
+  <div className="orby-card absolute right-0 top-40 rounded-2xl px-5 py-4 backdrop-blur-xl">
+    <p className="text-xs uppercase tracking-[0.25em] text-purple-300">
+      Vision
+    </p>
+
+    <h3 className="mt-2 text-xl font-bold">
+      Long Term
+    </h3>
+  </div>
+
+  {/* BOTTOM CARD */}
+
+  <div className="orby-card absolute bottom-10 left-10 rounded-2xl px-5 py-4 backdrop-blur-xl">
+    <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
+      Powered By
+    </p>
+
+    <h3 className="mt-2 text-xl font-bold">
+      Robinhood Chain
+    </h3>
+  </div>
+
+</motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.45 }}
+  className="mt-12 flex flex-col gap-5 sm:flex-row"
+>
+  <Link
+    href="#universe"
+    className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105"
+  >
+    <span className="relative z-10">
+      Explore Universe →
+    </span>
+
+    <div className="absolute inset-0 translate-y-full bg-white/10 transition-transform duration-300 group-hover:translate-y-0" />
+  </Link>
+
+  <Link
+    href="#vision"
+    className="rounded-2xl border border-cyan-400/30 px-8 py-4 font-semibold transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/10 hover:scale-105"
+  >
+    Read Vision
+  </Link>
+</motion.div>
+
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.65 }}
+  className="orby-card mt-12 max-w-lg rounded-3xl p-6"
+>
+  <div className="flex items-center gap-5">
+
+    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 text-3xl">
+      👾
+    </div>
+
+    <div>
+      <h3 className="text-xl font-bold">
+        Meet Orbi
+      </h3>
+
+      <p className="mt-2 text-zinc-400 leading-7">
+        The first cosmic guardian of the ORBY Universe.
+        Built to guide explorers into a new digital future.
+      </p>
+    </div>
+
+  </div>
+</motion.div>
+
+{/* Small Stats */}
+
+<div className="mt-10 flex flex-wrap gap-8 text-sm text-zinc-400">
+
+  <div>
+    <span className="text-2xl font-black text-cyan-300">
+      Web3
+    </span>
+
+    <p>Ecosystem</p>
+  </div>
+
+  <div>
+    <span className="text-2xl font-black text-purple-300">
+      AI
+    </span>
+
+    <p>Future Ready</p>
+  </div>
+
+  <div>
+    <span className="text-2xl font-black text-cyan-300">
+      ∞
+    </span>
+
+    <p>Long Vision</p>
+  </div>
+
+</div>
+  {/* Bottom Feature Cards */}
+
+<div className="relative z-10 mx-auto mt-12 grid max-w-7xl gap-6 px-6 pb-24 sm:grid-cols-2 xl:grid-cols-4">
+
+  {[
+    {
+      icon: "🌌",
+      title: "Community",
+      text: "A loyal community building ORBY together."
+    },
+    {
+      icon: "🚀",
+      title: "Innovation",
+      text: "Designed as a Web3 brand, not just another token."
+    },
+    {
+      icon: "🤖",
+      title: "AI Future",
+      text: "Ready for intelligent tools and next-generation utilities."
+    },
+    {
+      icon: "💎",
+      title: "Long Vision",
+      text: "Built patiently with sustainable long-term growth."
+    },
+  ].map((item, index) => (
+
+    <motion.div
+      key={item.title}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.12 }}
+      className="group orby-card rounded-3xl p-7 transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/30"
+    >
+
+      <div className="mb-5 text-5xl transition-transform duration-500 group-hover:scale-110">
+        {item.icon}
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-16 px-6 pt-32 pb-24 lg:flex-row">
+      <h3 className="text-2xl font-bold">
+        {item.title}
+      </h3>
 
-        {/* LEFT */}
+      <p className="mt-4 leading-7 text-zinc-400">
+        {item.text}
+      </p>
 
-        <div className="flex-1 text-center lg:text-left">
+    </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: .6 }}
-          >
-            <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-cyan-300">
+  ))}
 
-              Born on Robinhood Chain
+</div>
 
-            </span>
-          </motion.div>
+{/* Bottom Glow */}
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: .2 }}
-            className="mt-8 text-6xl font-black leading-none md:text-8xl"
-          >
-            ORBY
+<div className="pointer-events-none absolute bottom-0 left-1/2 h-72 w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-500/10 via-purple-500/15 to-pink-500/10 blur-[150px]" />
 
-            <span className="orby-title block mt-2">
-              GENESIS
-            </span>
-          </motion.h1>
+{/* Fade */}
 
-          <motion.p
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            transition={{ delay:.35 }}
-            className="mt-8 max-w-xl text-lg leading-8 text-zinc-300"
-          >
-            The beginning of a new digital universe powered by
-            community, imagination and long-term vision.
-          </motion.p>
-                    <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
-          >
-            <Link
-              href="#universe"
-              className="orby-button rounded-xl px-8 py-4 text-center font-semibold"
-            >
-              Explore Universe
-            </Link>
-
-            <Link
-              href="#vision"
-              className="rounded-xl border border-cyan-400/30 px-8 py-4 text-center font-semibold transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/10"
-            >
-              Read Vision
-            </Link>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="orby-card mt-12 flex max-w-md items-center gap-4 rounded-2xl p-5"
-          >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 text-2xl">
-              👾
-            </div>
-
-            <div>
-              <h3 className="font-semibold">
-                Meet Orbi
-              </h3>
-
-              <p className="mt-1 text-sm text-zinc-400">
-                Your guide through the ORBY Universe. Built for explorers,
-                creators and dreamers.
-              </p>
-            </div>
-          </motion.div>
-
-        </div>
-
-        {/* RIGHT */}
-
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.35 }}
-          className="relative flex flex-1 items-center justify-center"
-        >
-          <div className="absolute h-[520px] w-[520px] rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-600/20 blur-[120px]" />
-
-          <motion.div
-            animate={{
-              y: [0, -18, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="relative z-10"
-          >
-            <Image
-              src="/images/orbi.png"
-              alt="Orbi"
-              width={520}
-              height={520}
-              priority
-              className="drop-shadow-[0_0_60px_rgba(124,58,237,0.55)]"
-            />
-          </motion.div>
-        </motion.div>
-                {/* Bottom Cards */}
-
-      </div>
-
-      <div className="relative z-10 mx-auto mt-8 grid max-w-7xl gap-6 px-6 pb-24 sm:grid-cols-2 lg:grid-cols-4">
-
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="orby-card rounded-2xl p-6 text-center"
-        >
-          <div className="mb-4 text-4xl">🌌</div>
-
-          <h3 className="text-xl font-bold">
-            Community
-          </h3>
-
-          <p className="mt-3 text-sm leading-7 text-zinc-400">
-            Built together with a loyal community that believes in long-term
-            growth.
-          </p>
-
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: .1 }}
-          viewport={{ once: true }}
-          className="orby-card rounded-2xl p-6 text-center"
-        >
-          <div className="mb-4 text-4xl">🚀</div>
-
-          <h3 className="text-xl font-bold">
-            Innovation
-          </h3>
-
-          <p className="mt-3 text-sm leading-7 text-zinc-400">
-            Creating a modern Web3 ecosystem instead of another ordinary token.
-          </p>
-
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: .2 }}
-          viewport={{ once: true }}
-          className="orby-card rounded-2xl p-6 text-center"
-        >
-          <div className="mb-4 text-4xl">🤖</div>
-
-          <h3 className="text-xl font-bold">
-            AI Ready
-          </h3>
-
-          <p className="mt-3 text-sm leading-7 text-zinc-400">
-            Designed for future AI experiences and next generation utilities.
-          </p>
-
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: .3 }}
-          viewport={{ once: true }}
-          className="orby-card rounded-2xl p-6 text-center"
-        >
-          <div className="mb-4 text-4xl">💎</div>
-
-          <h3 className="text-xl font-bold">
-            Long Term
-          </h3>
-
-          <p className="mt-3 text-sm leading-7 text-zinc-400">
-            A brand focused on sustainability, trust and continuous evolution.
-          </p>
-
-        </motion.div>
-
-      </div>
-            {/* Bottom Fade */}
-
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050816] to-transparent" />
-
-      {/* Floating Stars */}
-
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-        <div className="absolute left-[8%] top-[18%] h-1.5 w-1.5 rounded-full bg-cyan-300 opacity-70 animate-pulse" />
-
-        <div className="absolute right-[15%] top-[28%] h-2 w-2 rounded-full bg-purple-300 opacity-70 animate-pulse" />
-
-        <div className="absolute left-[22%] bottom-[18%] h-1 w-1 rounded-full bg-white opacity-80 animate-pulse" />
-
-        <div className="absolute right-[32%] bottom-[24%] h-1.5 w-1.5 rounded-full bg-cyan-200 opacity-60 animate-pulse" />
-
-        <div className="absolute left-1/2 top-[12%] h-1 w-1 rounded-full bg-white opacity-70 animate-pulse" />
-
-      </div>
-
-    </section>
-  );
-}
+<div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050816] to-transparent" />
