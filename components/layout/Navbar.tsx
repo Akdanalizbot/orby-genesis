@@ -1,61 +1,89 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 25);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#050816]/60 backdrop-blur-xl">
+    <header
+      className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "border-b border-zinc-800 bg-black/80 backdrop-blur-xl"
+          : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <Link
+          href="/"
+          className="text-2xl font-black tracking-wider"
+        >
+          <span className="text-white">ORBY</span>
+          <span className="text-red-500">.</span>
+        </Link>
 
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 shadow-[0_0_30px_rgba(34,211,238,.35)]">
-            <span className="text-lg font-black text-black">
-              O
-            </span>
-          </div>
-
-          <div>
-            <h1 className="bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-xl font-black text-transparent">
-              ORBY
-            </h1>
-
-            <p className="-mt-1 text-[11px] uppercase tracking-[0.25em] text-gray-500">
-              Genesis
-            </p>
-          </div>
-
-        </div>
-
-        {/* Menu */}
-
-        <nav className="hidden items-center gap-8 text-sm font-medium text-gray-300 md:flex">
-
-          <a className="transition hover:text-cyan-300" href="#">
+        <nav className="hidden items-center gap-8 text-sm md:flex">
+          <Link href="#story" className="transition hover:text-red-400">
             Story
-          </a>
+          </Link>
 
-          <a className="transition hover:text-cyan-300" href="#">
+          <Link href="#vision" className="transition hover:text-red-400">
+            Vision
+          </Link>
+
+          <Link href="#universe" className="transition hover:text-red-400">
             Universe
-          </a>
+          </Link>
 
-          <a className="transition hover:text-cyan-300" href="#">
+          <Link href="#roadmap" className="transition hover:text-red-400">
             Roadmap
-          </a>
+          </Link>
+          <Link
+            href="#story"
+            className="transition-colors hover:text-red-400"
+          >
+            Story
+          </Link>
 
-          <a className="transition hover:text-cyan-300" href="#">
-            Community
-          </a>
+          <Link
+            href="#vision"
+            className="transition-colors hover:text-red-400"
+          >
+            Vision
+          </Link>
 
-          <a className="transition hover:text-cyan-300" href="#">
-            Whitepaper
-          </a>
+          <Link
+            href="#universe"
+            className="transition-colors hover:text-red-400"
+          >
+            Universe
+          </Link>
 
+          <Link
+            href="#roadmap"
+            className="transition-colors hover:text-red-400"
+          >
+            Roadmap
+          </Link>
         </nav>
 
-        {/* Button */}
-
-        <button className="rounded-full bg-cyan-400 px-6 py-3 font-bold text-black transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(34,211,238,.45)]">
+        <Link
+          href="#"
+          className="rounded-full bg-red-600 px-5 py-2.5 text-sm font-semibold transition hover:bg-red-500"
+        >
           Launch App
-        </button>
-
+        </Link>
       </div>
     </header>
   );
