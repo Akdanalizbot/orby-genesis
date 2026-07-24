@@ -1,3 +1,7 @@
+import Container from "@/components/ui/Container";
+import SectionTitle from "@/components/ui/SectionTitle";
+import Card from "@/components/ui/Card";
+
 const cards = [
   {
     title: "Explore",
@@ -27,49 +31,22 @@ const cards = [
 
 export default function Universe() {
   return (
-    <section className="bg-[#070b1f] py-32 px-6">
-      <div className="mx-auto max-w-7xl">
-
-        <div className="mb-20 text-center">
-
-          <p className="text-sm uppercase tracking-[0.4em] text-cyan-400">
-            UNIVERSE
-          </p>
-
-          <h2 className="mt-6 text-5xl font-extrabold gradient-text md:text-6xl">
-            Explore The ORBY Universe
-          </h2>
-
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-400">
-            More than a project.
-            <br />
-            More than a community.
-            <br />
-            Welcome to a universe built for explorers.
-          </p>
-
-        </div>
+    <section className="bg-[#070b1f] py-32">
+      <Container>
+        <SectionTitle
+          eyebrow="UNIVERSE"
+          title="Explore The ORBY Universe"
+          description="More than a project. More than a community. Welcome to a universe built for explorers."
+        />
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
           {cards.map((card) => (
-            <div
-              key={card.title}
-              className="glass rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-            >
-              <h3 className="mb-4 text-2xl font-bold">
-                {card.title}
-              </h3>
-
-              <p className="leading-8 text-slate-400">
-                {card.text}
-              </p>
-            </div>
+            <Card key={card.title} title={card.title}>
+              {card.text}
+            </Card>
           ))}
-
         </div>
-
-      </div>
+      </Container>
     </section>
   );
 }
