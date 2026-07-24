@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
-:root {
-  --background: #050816;
-  --foreground: #ffffff;
+:root{
+  --orby-bg:#050816;
+  --orby-surface:#0b1022;
 
-  --primary: #7c3aed;
-  --secondary: #22d3ee;
+  --orby-blue:#4f7cff;
+  --orby-purple:#7c3aed;
+  --orby-cyan:#22d3ee;
 
-  --muted: #94a3b8;
+  --orby-border:#1d2750;
 }
 
 * {
@@ -147,4 +148,35 @@ button{
     transform:translateY(0px);
   }
 
+}
+.orby-card{
+  background:rgba(11,16,34,.75);
+  border:1px solid var(--orby-border);
+  backdrop-filter:blur(18px);
+}
+
+.orby-button{
+  background:linear-gradient(
+    90deg,
+    var(--orby-blue),
+    var(--orby-purple)
+  );
+}
+
+.orby-glow{
+  box-shadow:
+    0 0 35px rgba(79,124,255,.35),
+    0 0 90px rgba(124,58,237,.18);
+}
+
+.orby-title{
+  background:linear-gradient(
+    90deg,
+    #4f7cff,
+    #22d3ee,
+    #7c3aed
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
