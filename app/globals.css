@@ -212,3 +212,20 @@ button{
     0 0 40px rgba(79,124,255,.20),
     0 0 90px rgba(124,58,237,.15);
 }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
