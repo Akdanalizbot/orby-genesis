@@ -72,7 +72,7 @@
     className="relative z-20"
   >
     <Image
-      src="/images/orbi.png"
+      src="/images/orbi.webp"
       alt="Orbi"
       width={650}
       height={650}
