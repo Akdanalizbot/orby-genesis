@@ -31,11 +31,11 @@ export default function Hero() {
 
           </div>
 
-          <className="mt-8 bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-6xl font-black tracking-tight text-transparent sm:text-7xl md:text-9xl">
+        <h1 className="mt-8 bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-6xl font-black tracking-tight text-transparent sm:text-7xl md:text-9xl">
             ORBY
           </h1>
 
-          <className="mt-8 text-3xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
+          <h2 className="mt-8 text-3xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
             The First Explorer
             <br />
             Of Robinhood Chain
