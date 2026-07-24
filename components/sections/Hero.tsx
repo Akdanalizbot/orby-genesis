@@ -1,124 +1,117 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#050816] text-white">
-
-      {/* Background Glow */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white">
+      {/* Background */}
       <div className="absolute inset-0">
-
-        <div className="absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
-
-        <div className="absolute -left-32 bottom-0 h-[500px] w-[500px] rounded-full bg-violet-500/10 blur-3xl" />
-
-        <div className="absolute -right-32 top-20 h-[450px] w-[450px] rounded-full bg-cyan-400/10 blur-3xl" />
-
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050816_90%)]" />
-
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black" />
+        <div className="absolute left-1/2 top-0 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-red-500/10 blur-3xl" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-16 px-6 py-24 lg:flex-row">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-5 rounded-full border border-red-500/30 bg-red-500/10 px-5 py-2 text-sm tracking-[0.25em] uppercase text-red-400"
+        >
+          Born on Robinhood Chain
+        </motion.p>
 
-        {/* LEFT */}
+        <motion.h1
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl text-5xl font-black leading-tight md:text-7xl"
+        >
+          ORBY
+          <span className="block bg-gradient-to-r from-red-500 via-orange-400 to-yellow-300 bg-clip-text text-transparent">
+            Genesis
+          </span>
+        </motion.h1>
 
-        <div className="max-w-2xl text-center lg:text-left">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.25 }}
+          className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300 md:text-xl"
+        >
+          A story-driven Web3 universe built around loyalty, purpose,
+          and community. More than a token.
+          <span className="text-white font-semibold">
+            {" "}A movement begins.
+          </span>
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45 }}
+          className="mt-12 flex flex-col gap-5 sm:flex-row"
+        >
+          <Link
+            href="#vision"
+            className="rounded-xl bg-red-600 px-8 py-4 font-semibold transition hover:bg-red-500"
+          >
+            Explore Vision
+          </Link>
 
-          <div className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-6 py-2 backdrop-blur-xl">
+          <Link
+            href="#roadmap"
+            className="rounded-xl border border-zinc-700 px-8 py-4 font-semibold transition hover:border-red-500 hover:bg-zinc-900"
+          >
+            View Roadmap
+          </Link>
+        </motion.div>
 
-            <p className="text-xs uppercase tracking-[0.45em] text-cyan-300">
-              Born on Robinhood Chain
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="mt-20 grid w-full max-w-5xl grid-cols-2 gap-6 md:grid-cols-4"
+        >
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+            <h3 className="text-3xl font-black text-red-400">∞</h3>
+            <p className="mt-2 text-sm text-zinc-400">
+              Long-Term Vision
             </p>
-
           </div>
 
-        <h1 className="mt-8 bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-6xl font-black tracking-tight text-transparent sm:text-7xl md:text-9xl">
-            ORBY
-          </h1>
-
-          <h2 className="mt-8 text-3xl font-black leading-tight text-white sm:text-5xl md:text-6xl">
-            The First Explorer
-            <br />
-            Of Robinhood Chain
-          </h2>
-          <p className="mt-8 max-w-xl text-lg leading-9 text-gray-400">
-            Building a community-driven universe for the next generation of
-            Web3.
-
-            <br />
-            <br />
-
-            More than a token.
-
-            <br />
-
-            A story.
-
-            <br />
-
-            A character.
-
-            <br />
-
-            A universe.
-
-          </p>
-
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-
-            <Link
-              href="#"
-              className="rounded-full bg-cyan-400 px-10 py-4 text-center font-bold text-black transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(34,211,238,.45)]"
-            >
-              Launch App
-            </Link>
-
-            <Link
-              href="/whitepaper"
-              className="rounded-full border border-white/15 bg-white/5 px-10 py-4 text-center font-semibold text-white backdrop-blur-xl transition duration-300 hover:border-cyan-400 hover:bg-cyan-400/10"
-            >
-              Read Genesis Paper
-            </Link>
-
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+            <h3 className="text-3xl font-black text-red-400">100%</h3>
+            <p className="mt-2 text-sm text-zinc-400">
+              Community Driven
+            </p>
+          </div>
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+            <h3 className="text-3xl font-black text-red-400">Web3</h3>
+            <p className="mt-2 text-sm text-zinc-400">
+              Story Universe
+            </p>
           </div>
 
-        </div>
-
-        {/* RIGHT */}
-
-        <div className="relative flex items-center justify-center">
-          <div className="absolute h-[420px] w-[420px] animate-pulse rounded-full bg-violet-500/20 blur-3xl" />
-
-          <div className="absolute h-[320px] w-[320px] rounded-full border border-cyan-400/20" />
-
-          <div className="relative flex h-[380px] w-[380px] items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-violet-500/10 to-cyan-500/10 backdrop-blur-xl shadow-[0_0_80px_rgba(139,92,246,.35)]">
-
-            {/* ORBY Placeholder */}
-
-            <div className="text-center">
-
-              <div className="animate-bounce text-8xl">
-                ✨
-              </div>
-
-              <h3 className="mt-6 text-xl font-bold text-white">
-                ORBY
-              </h3>
-
-              <p className="mt-3 text-sm uppercase tracking-[0.35em] text-cyan-300">
-                The First Explorer
-              </p>
-
-              <p className="mt-4 text-gray-400">
-                Mascot Coming Soon
-              </p>
-
-            </div>
-
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+            <h3 className="text-3xl font-black text-red-400">2026</h3>
+            <p className="mt-2 text-sm text-zinc-400">
+              Genesis Begins
+            </p>
           </div>
+        </motion.div>
 
-        </div>
-
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ delay: 1.2 }}
+          className="mt-16"
+        >
+          <div className="mx-auto h-px w-40 bg-gradient-to-r from-transparent via-red-500 to-transparent" />
+        </motion.div>
       </div>
+      {/* Bottom Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
     </section>
   );
 }
