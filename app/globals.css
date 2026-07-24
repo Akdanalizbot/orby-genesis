@@ -149,10 +149,35 @@ button{
   }
 
 }
+/* ==========================================
+   ORBY DESIGN SYSTEM v2
+========================================== */
+
+:root{
+  --orby-bg:#050816;
+  --orby-surface:#0b1022;
+  --orby-surface-2:#111936;
+
+  --orby-blue:#4f7cff;
+  --orby-purple:#7c3aed;
+  --orby-cyan:#22d3ee;
+
+  --orby-border:#25335f;
+}
+
 .orby-card{
-  background:rgba(11,16,34,.75);
+  background:rgba(11,16,34,.72);
   border:1px solid var(--orby-border);
   backdrop-filter:blur(18px);
+  transition:.35s ease;
+}
+
+.orby-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(79,124,255,.45);
+  box-shadow:
+    0 0 25px rgba(79,124,255,.18),
+    0 0 80px rgba(124,58,237,.12);
 }
 
 .orby-button{
@@ -161,22 +186,29 @@ button{
     var(--orby-blue),
     var(--orby-purple)
   );
+  transition:.3s ease;
 }
 
-.orby-glow{
+.orby-button:hover{
+  transform:translateY(-2px);
   box-shadow:
-    0 0 35px rgba(79,124,255,.35),
-    0 0 90px rgba(124,58,237,.18);
+    0 0 30px rgba(79,124,255,.35);
 }
 
 .orby-title{
   background:linear-gradient(
     90deg,
-    #4f7cff,
-    #22d3ee,
-    #7c3aed
+    var(--orby-blue),
+    var(--orby-cyan),
+    var(--orby-purple)
   );
 
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+}
+
+.orby-glow{
+  box-shadow:
+    0 0 40px rgba(79,124,255,.20),
+    0 0 90px rgba(124,58,237,.15);
 }
