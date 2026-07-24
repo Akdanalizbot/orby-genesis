@@ -17,7 +17,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-5 rounded-full border border-red-500/30 bg-red-500/10 px-5 py-2 text-sm tracking-[0.25em] uppercase text-red-400"
+          className="mb-5 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-sm tracking-[0.25em] uppercase text-cyan-300"
         >
           Born on Robinhood Chain
         </motion.p>
@@ -29,7 +29,7 @@ export default function Hero() {
           className="max-w-5xl text-5xl font-black leading-tight md:text-7xl"
         >
           ORBY
-          <span className="block bg-gradient-to-r from-red-500 via-orange-400 to-yellow-300 bg-clip-text text-transparent">
+          <span className="block orby-title">
             Genesis
           </span>
         </motion.h1>
@@ -54,14 +54,14 @@ export default function Hero() {
         >
           <Link
             href="#vision"
-            className="rounded-xl bg-red-600 px-8 py-4 font-semibold transition hover:bg-red-500"
+            className="orby-button rounded-xl px-8 py-4 font-semibold text-white"
           >
             Explore Vision
           </Link>
 
           <Link
             href="#roadmap"
-            className="rounded-xl border border-zinc-700 px-8 py-4 font-semibold transition hover:border-red-500 hover:bg-zinc-900"
+            className="rounded-xl border border-zinc-700 px-8 py-4 font-semibold transition hover:border-cyan-400 hover:bg-zinc-900"
           >
             View Roadmap
           </Link>
@@ -73,27 +73,27 @@ export default function Hero() {
           transition={{ delay: 0.8 }}
           className="mt-20 grid w-full max-w-5xl grid-cols-2 gap-6 md:grid-cols-4"
         >
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+          <div className="rounded-2xl orby-card p-6">
             <h3 className="text-3xl font-black text-red-400">∞</h3>
             <p className="mt-2 text-sm text-zinc-400">
               Long-Term Vision
             </p>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+          <div className="rounded-2xl orby-card p-6">
             <h3 className="text-3xl font-black text-red-400">100%</h3>
             <p className="mt-2 text-sm text-zinc-400">
               Community Driven
             </p>
           </div>
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+          <div className="rounded-2xl orby-card p-6">
             <h3 className="text-3xl font-black text-red-400">Web3</h3>
             <p className="mt-2 text-sm text-zinc-400">
               Story Universe
             </p>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-6">
+          <div className="rounded-2xl orby-card p-6">
             <h3 className="text-3xl font-black text-red-400">2026</h3>
             <p className="mt-2 text-sm text-zinc-400">
               Genesis Begins
