@@ -14,7 +14,7 @@ export default function Story() {
         </h2>
 
         <p className="mt-10 text-lg leading-9 text-gray-400">
-          ORBY wasn't created to follow trends.
+          ORBY wasn&apos;t created to follow trends.
           <br /><br />
           It was born on Robinhood Chain with one mission:
           <br />
