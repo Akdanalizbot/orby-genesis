@@ -92,7 +92,7 @@ export default function Story() {
             </h3>
 
             <p className="text-lg leading-9 text-gray-300">
-              ORBY wasn't created to chase trends.
+              ORBY wasn&apos;t created to chase trends.
               <br />
               It was created to build a community.
               <br />
