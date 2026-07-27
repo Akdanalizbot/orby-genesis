@@ -18,9 +18,9 @@ export default function Rings() {
       <torusGeometry args={[1.35, 0.035, 32, 180]} />
 
       <meshStandardMaterial
-        color="#7C4DFF"
+        color="#B266FF"
         emissive="#66D9FF"
-        emissiveIntensity={4}
+        emissiveIntensity={8}
       />
     </mesh>
   );
