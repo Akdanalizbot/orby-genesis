@@ -1,7 +1,9 @@
-import Scene from "@/components/orb/Scene";
+"use client";
+
 import HeroBackground from "@/components/hero/HeroBackground";
 import HeroLogo from "@/components/hero/HeroLogo";
 import HeroSubtitle from "@/components/hero/HeroSubtitle";
+import OrbiScene from "@/components/orb/OrbiScene";
 
 export default function Hero() {
   return (
@@ -10,10 +12,9 @@ export default function Hero() {
 
       <div className="relative z-20 flex h-full items-center justify-center">
         <div className="text-center">
-
-            <div className="mx-auto mb-8 h-[460px] w-[460px]">
-  <Scene />
-</div>
+          <div className="mx-auto mb-8 h-[220px] w-[220px]">
+            <OrbiScene />
+          </div>
 
           <HeroLogo />
           <HeroSubtitle />
