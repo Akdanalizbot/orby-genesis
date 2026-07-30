@@ -1,25 +1,107 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 import HeroBackground from "@/components/hero/HeroBackground";
 import HeroLogo from "@/components/hero/HeroLogo";
 import HeroSubtitle from "@/components/hero/HeroSubtitle";
+import HeroCTA from "@/components/hero/HeroCTA";
+
 import OrbiScene from "@/components/orb/OrbiScene";
+
+import QuantumPortal from "@/components/transitions/QuantumPortal";
+import { PortalProvider } from "@/components/transitions/PortalContext";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-black">
-      <HeroBackground />
+    <PortalProvider>
+      <section className="relative h-screen overflow-hidden bg-black">
+        {/* Background */}
+        <HeroBackground />
 
-      <div className="relative z-20 flex h-full items-center justify-center">
-        <div className="text-center">
-          <div className="mx-auto mb-8 h-[220px] w-[220px]">
-            <OrbiScene />
+        {/* Hero Content */}
+        <div className="relative z-20 flex h-full items-center justify-center px-6">
+          <div className="text-center">
+            {/* ================= ORBI ================= */}
+            <motion.div
+              className="mx-auto mb-10 h-[200px] w-[950px]"
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1.8,
+                delay: 0.4,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <OrbiScene />
+            </motion.div>
+
+            {/* ================= LOGO ================= */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.2,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 2.8,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
+              <HeroLogo />
+            </motion.div>
+
+            {/* ================= SUBTITLE ================= */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                delay: 2.5,
+              }}
+            >
+              <HeroSubtitle />
+            </motion.div>
+
+            {/* ================= CTA ================= */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.8,
+                delay: 3.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <HeroCTA />
+            </motion.div>
           </div>
-
-          <HeroLogo />
-          <HeroSubtitle />
         </div>
-      </div>
-    </section>
+
+        {/* Quantum Portal Overlay */}
+        <QuantumPortal />
+      </section>
+    </PortalProvider>
   );
 }

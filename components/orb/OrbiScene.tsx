@@ -6,6 +6,7 @@ import { Environment } from "@react-three/drei";
 
 import OrbiCore from "./OrbiCore";
 import GlowRing from "./GlowRing";
+import CameraRig from "./CameraRig";
 
 export default function OrbiScene() {
   return (
@@ -33,11 +34,13 @@ export default function OrbiScene() {
         color="#7b4dff"
       />
 
-      <Environment preset="city" />
+     <Environment preset="city" />
 
-      <OrbiCore />
-      <GlowRing />
-      <EnergyParticles />
+<CameraRig />
+
+<OrbiCore />
+<GlowRing />
+<EnergyParticles />
     </Canvas>
   );
 }

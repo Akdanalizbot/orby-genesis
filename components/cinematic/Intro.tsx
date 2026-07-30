@@ -23,6 +23,38 @@ export default function Intro() {
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
         >
+          {/* Glow */}
+          <motion.div
+            className="absolute h-40 w-40 rounded-full bg-cyan-400/20 blur-3xl"
+            initial={{ opacity: 0, scale: 0.4 }}
+            animate={{
+              opacity: [0, 0.8, 0],
+              scale: [0.4, 1.8, 3],
+            }}
+            transition={{
+              duration: 2.6,
+              ease: "easeOut",
+            }}
+          />
+
+          {/* Shockwave */}
+          <motion.div
+            className="absolute h-4 w-4 rounded-full border border-cyan-300"
+            initial={{
+              scale: 1,
+              opacity: 0,
+            }}
+            animate={{
+              scale: [1, 10],
+              opacity: [0.7, 0],
+            }}
+            transition={{
+              duration: 2.2,
+              ease: "easeOut",
+            }}
+          />
+
+          {/* Energy Core */}
           <motion.div
             className="h-4 w-4 rounded-full bg-cyan-400"
             initial={{

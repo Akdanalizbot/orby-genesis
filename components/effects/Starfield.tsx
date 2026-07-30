@@ -1,15 +1,35 @@
+"use client";
+
+import { useMemo } from "react";
+
 export default function Starfield() {
+  const stars = useMemo(() => {
+    return Array.from({ length: 160 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      size: 1 + Math.random() * 3,
+      opacity: 0.35 + Math.random() * 0.65,
+      delay: Math.random() * 5,
+      duration: 3 + Math.random() * 5,
+    }));
+  }, []);
+
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {[...Array(120)].map((_, i) => (
+      {stars.map((star) => (
         <span
-          key={i}
-          className="absolute h-[3px] w-[3px] rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(85,216,255,0.9)] animate-pulse"
+          key={star.id}
+          className="absolute rounded-full bg-cyan-200 animate-pulse"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 3}s`,
-            animationDuration: `${2 + Math.random() * 4}s`,
+            left: `${star.left}%`,
+            top: `${star.top}%`,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            opacity: star.opacity,
+            animationDelay: `${star.delay}s`,
+            animationDuration: `${star.duration}s`,
+            boxShadow: "0 0 10px rgba(120,230,255,.9)",
           }}
         />
       ))}
