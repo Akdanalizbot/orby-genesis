@@ -8,7 +8,13 @@ import OrbiCore from "./OrbiCore";
 import GlowRing from "./GlowRing";
 import CameraRig from "./CameraRig";
 
-export default function OrbiScene() {
+type OrbiSceneProps = {
+  scale?: number;
+};
+
+export default function OrbiScene({
+  scale = 1,
+}: OrbiSceneProps) {
   return (
     <Canvas
       camera={{
@@ -34,13 +40,15 @@ export default function OrbiScene() {
         color="#7b4dff"
       />
 
-     <Environment preset="city" />
+      <Environment preset="city" />
 
-<CameraRig />
+      <CameraRig />
 
-<OrbiCore />
-<GlowRing />
-<EnergyParticles />
+      <group scale={scale}>
+        <OrbiCore />
+        <GlowRing />
+        <EnergyParticles />
+      </group>
     </Canvas>
   );
 }
