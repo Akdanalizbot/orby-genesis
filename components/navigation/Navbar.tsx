@@ -10,6 +10,7 @@ const navItems = [
   { en: "ORBI", tr: "ORBI", href: "#orbi" },
   { en: "UNIVERSE", tr: "EVREN", href: "#universe" },
   { en: "VISION", tr: "VİZYON", href: "#vision" },
+  { en: "COMMUNITY", tr: "TOPLULUK", href: "#community" },
   { en: "EVOLUTION", tr: "EVRİM", href: "#roadmap" },
 ];
 

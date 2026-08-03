@@ -1,13 +1,27 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+
+import Footer from "@/components/navigation/Footer";
 import Navbar from "@/components/navigation/Navbar";
+
 import HeroBackground from "@/components/hero/HeroBackground";
 import HeroLogo from "@/components/hero/HeroLogo";
 import HeroSubtitle from "@/components/hero/HeroSubtitle";
 import HeroCTA from "@/components/hero/HeroCTA";
+
 import LanguageSwitcher from "@/components/language/LanguageSwitcher";
+import { LanguageProvider } from "@/components/language/LanguageContext";
+
 import OrbiScene from "@/components/orb/OrbiScene";
+
+import Community from "@/components/sections/Community";
+import Genesis from "@/components/sections/Genesis";
+import Story from "@/components/sections/Story";
+import Orbi from "@/components/sections/Orbi";
+import Universe from "@/components/sections/Universe";
+import Vision from "@/components/sections/Vision";
+import Roadmap from "@/components/sections/Roadmap";
 
 import QuantumPortal from "@/components/transitions/QuantumPortal";
 import GenesisTransition from "@/components/transitions/GenesisTransition";
@@ -16,13 +30,6 @@ import {
   PortalProvider,
   usePortal,
 } from "@/components/transitions/PortalContext";
-
-import Genesis from "@/components/sections/Genesis";
-import Story from "@/components/sections/Story";
-import Orbi from "@/components/sections/Orbi";
-import Universe from "@/components/sections/Universe";
-import Vision from "@/components/sections/Vision";
-import Roadmap from "@/components/sections/Roadmap";
 
 /* =========================================================
    HERO EXPERIENCE
@@ -39,7 +46,10 @@ function HeroExperience() {
           : "relative h-screen overflow-hidden bg-black"
       }
     >
+      {/* ================= LANGUAGE SWITCHER ================= */}
+
       <LanguageSwitcher />
+
       {/* =====================================================
           OPENING EXPERIENCE
       ===================================================== */}
@@ -61,9 +71,11 @@ function HeroExperience() {
             }}
           >
             {/* Background */}
+
             <HeroBackground />
 
             {/* Hero Content */}
+
             <div className="relative z-20 flex h-full items-center justify-center px-6">
               <div className="text-center">
 
@@ -149,6 +161,7 @@ function HeroExperience() {
             </div>
 
             {/* Quantum Portal */}
+
             <QuantumPortal />
           </motion.section>
         )}
@@ -172,26 +185,29 @@ function HeroExperience() {
             ease: "easeOut",
           }}
         >
-          {/* ================= GENESIS ================= */}
+          {/* ================= NAVBAR ================= */}
+
           <Navbar />
 
+          {/* ================= SECTIONS ================= */}
+
           <Genesis />
+
           <Story />
+
           <Orbi />
+
           <Universe />
+
           <Vision />
+
+          <Community />
+
           <Roadmap />
 
-          {/* 
-            Bundan sonra ana site bölümleri buraya gelecek.
+          {/* ================= FOOTER ================= */}
 
-            Örnek:
-
-            <Story />
-            <Universe />
-            <Vision />
-            <Roadmap />
-          */}
+          <Footer />
         </motion.div>
       )}
 
@@ -205,13 +221,15 @@ function HeroExperience() {
 }
 
 /* =========================================================
-   PROVIDER
+   PROVIDERS
 ========================================================= */
 
 export default function Hero() {
   return (
-    <PortalProvider>
-      <HeroExperience />
-    </PortalProvider>
+    <LanguageProvider>
+      <PortalProvider>
+        <HeroExperience />
+      </PortalProvider>
+    </LanguageProvider>
   );
 }
