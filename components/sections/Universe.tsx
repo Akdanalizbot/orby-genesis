@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/components/language/LanguageContext";
 
 export default function Universe() {
+  const { language } = useLanguage();
+
   return (
     <section
       id="universe"
@@ -262,10 +265,14 @@ export default function Universe() {
             md:text-7xl
           "
         >
-          A WORLD BEYOND
+          {language === "en"
+            ? "A WORLD BEYOND"
+            : "ZİNCİRİN ÖTESİNDE"}
 
           <span className="block text-cyan-300">
-            THE CHAIN.
+            {language === "en"
+              ? "THE CHAIN."
+              : "BİR DÜNYA."}
           </span>
         </motion.h2>
 
@@ -325,10 +332,21 @@ export default function Universe() {
             md:text-lg
           "
         >
-          ORBYZ is more than a signal, a character,
-          or a point on a network. It is a growing digital
-          universe shaped by story, community and
-          the worlds that emerge between them.
+          {language === "en" ? (
+            <>
+              ORBYZ is more than a signal, a character,
+              or a point on a network. It is a growing digital
+              universe shaped by story, community and
+              the worlds that emerge between them.
+            </>
+          ) : (
+            <>
+              ORBYZ bir sinyalden, bir karakterden veya
+              bir ağ üzerindeki noktadan daha fazlasıdır.
+              Hikâye, topluluk ve onların arasında doğan
+              dünyalarla şekillenen, büyüyen dijital bir evrendir.
+            </>
+          )}
         </motion.p>
 
         {/* Three Principles */}
@@ -361,19 +379,19 @@ export default function Universe() {
         >
           <div className="rounded-2xl border border-white/5 bg-white/[0.02] px-6 py-5">
             <p className="text-xs uppercase tracking-[0.35em] text-cyan-300/60">
-              STORY
+              {language === "en" ? "STORY" : "HİKÂYE"}
             </p>
           </div>
 
           <div className="rounded-2xl border border-white/5 bg-white/[0.02] px-6 py-5">
             <p className="text-xs uppercase tracking-[0.35em] text-cyan-300/60">
-              COMMUNITY
+              {language === "en" ? "COMMUNITY" : "TOPLULUK"}
             </p>
           </div>
 
           <div className="rounded-2xl border border-white/5 bg-white/[0.02] px-6 py-5">
             <p className="text-xs uppercase tracking-[0.35em] text-cyan-300/60">
-              EVOLUTION
+              {language === "en" ? "EVOLUTION" : "EVRİM"}
             </p>
           </div>
         </motion.div>

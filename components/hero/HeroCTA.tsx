@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/components/language/LanguageContext";
 
 export default function HeroCTA() {
+  const { language } = useLanguage();
+
   const enterOrbyz = () => {
     window.dispatchEvent(
       new KeyboardEvent("keydown", {
@@ -52,7 +55,7 @@ export default function HeroCTA() {
         hover:shadow-[0_0_40px_rgba(34,211,238,.35)]
       "
     >
-      ENTER ORBYZ
+      {language === "en" ? "ENTER ORBYZ" : "ORBYZ'E GİR"}
     </motion.button>
   );
 }

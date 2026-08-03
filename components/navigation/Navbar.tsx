@@ -3,19 +3,21 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePortal } from "@/components/transitions/PortalContext";
+import { useLanguage } from "@/components/language/LanguageContext";
 
 const navItems = [
-  { label: "ORIGIN", href: "#story" },
-  { label: "ORBI", href: "#orbi" },
-  { label: "UNIVERSE", href: "#universe" },
-  { label: "VISION", href: "#vision" },
-  { label: "EVOLUTION", href: "#roadmap" },
+  { en: "ORIGIN", tr: "KÖKEN", href: "#story" },
+  { en: "ORBI", tr: "ORBI", href: "#orbi" },
+  { en: "UNIVERSE", tr: "EVREN", href: "#universe" },
+  { en: "VISION", tr: "VİZYON", href: "#vision" },
+  { en: "EVOLUTION", tr: "EVRİM", href: "#roadmap" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const { resetPortal } = usePortal();
+  const { language } = useLanguage();
 
   const scrollToSection = (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -95,7 +97,11 @@ export default function Navbar() {
           <a
             href="#"
             onClick={returnToEnter}
-            aria-label="Return to ENTER ORBYZ"
+            aria-label={
+              language === "en"
+                ? "Return to ENTER ORBYZ"
+                : "ENTER ORBYZ ekranına dön"
+            }
             className="
               relative
               z-50
@@ -123,7 +129,7 @@ export default function Navbar() {
           >
             {navItems.map((item) => (
               <a
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 onClick={(event) =>
                   scrollToSection(event, item.href)
@@ -140,7 +146,7 @@ export default function Navbar() {
                   hover:text-cyan-300
                 "
               >
-                {item.label}
+                {language === "en" ? item.en : item.tr}
               </a>
             ))}
           </nav>
@@ -177,14 +183,20 @@ export default function Navbar() {
               "
             />
 
-            SYSTEM ONLINE
+            {language === "en"
+              ? "SYSTEM ONLINE"
+              : "SİSTEM ÇEVRİMİÇİ"}
           </div>
 
           {/* ================= MOBILE HAMBURGER ================= */}
 
           <button
             type="button"
-            aria-label="Toggle navigation menu"
+            aria-label={
+              language === "en"
+                ? "Toggle navigation menu"
+                : "Navigasyon menüsünü aç veya kapat"
+            }
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((prev) => !prev)}
             className="
@@ -309,7 +321,7 @@ export default function Navbar() {
             >
               {navItems.map((item, index) => (
                 <motion.a
-                  key={item.label}
+                  key={item.href}
                   href={item.href}
                   onClick={(event) =>
                     scrollToSection(event, item.href)
@@ -342,7 +354,7 @@ export default function Navbar() {
                     hover:text-cyan-300
                   "
                 >
-                  {item.label}
+                  {language === "en" ? item.en : item.tr}
                 </motion.a>
               ))}
 
@@ -388,7 +400,9 @@ export default function Navbar() {
                   "
                 />
 
-                SYSTEM ONLINE
+                {language === "en"
+                  ? "SYSTEM ONLINE"
+                  : "SİSTEM ÇEVRİMİÇİ"}
               </motion.div>
             </nav>
           </motion.div>

@@ -6,7 +6,7 @@ import HeroBackground from "@/components/hero/HeroBackground";
 import HeroLogo from "@/components/hero/HeroLogo";
 import HeroSubtitle from "@/components/hero/HeroSubtitle";
 import HeroCTA from "@/components/hero/HeroCTA";
-
+import LanguageSwitcher from "@/components/language/LanguageSwitcher";
 import OrbiScene from "@/components/orb/OrbiScene";
 
 import QuantumPortal from "@/components/transitions/QuantumPortal";
@@ -39,6 +39,7 @@ function HeroExperience() {
           : "relative h-screen overflow-hidden bg-black"
       }
     >
+      <LanguageSwitcher />
       {/* =====================================================
           OPENING EXPERIENCE
       ===================================================== */}

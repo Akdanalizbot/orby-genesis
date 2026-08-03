@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/components/language/LanguageContext";
 
 export default function Vision() {
+  const { language } = useLanguage();
+
   return (
     <section
       id="vision"
@@ -171,14 +174,14 @@ export default function Vision() {
               xl:text-8xl
             "
           >
-            BUILD THE
+            {language === "en" ? "BUILD THE" : "EVRENİ"}
 
             <span className="block text-cyan-300">
-              UNIVERSE.
+              {language === "en" ? "UNIVERSE." : "BİRLİKTE"}
             </span>
 
             <span className="block text-white/40">
-              TOGETHER.
+              {language === "en" ? "TOGETHER." : "İNŞA ET."}
             </span>
           </motion.h2>
 
@@ -244,10 +247,20 @@ export default function Vision() {
               lg:mx-0
             "
           >
-            ORBYZ is built as a universe before it becomes
-            an ecosystem. A world with identity, story and
-            purpose — shaped over time by the community
-            that enters it.
+            {language === "en" ? (
+              <>
+                ORBYZ is built as a universe before it becomes
+                an ecosystem. A world with identity, story and
+                purpose — shaped over time by the community
+                that enters it.
+              </>
+            ) : (
+              <>
+                ORBYZ bir ekosistem olmadan önce bir evren olarak
+                inşa edilir. Kimliği, hikâyesi ve amacı olan bir dünya —
+                zaman içinde ona katılan topluluk tarafından şekillenir.
+              </>
+            )}
           </motion.p>
         </div>
 
@@ -342,17 +355,27 @@ export default function Vision() {
               />
 
               <p className="mb-3 text-xs tracking-[0.35em] text-cyan-300/50">
-                01 // IDENTITY
+                {language === "en" ? "01 // IDENTITY" : "01 // KİMLİK"}
               </p>
 
               <h3 className="mb-3 text-xl font-medium text-white">
-                A World With Its Own Identity
+                {language === "en" ? "A World With Its Own Identity" : "Kendi Kimliğine Sahip Bir Dünya"}
               </h3>
 
               <p className="text-sm leading-7 text-white/40">
-                ORBYZ begins with a recognizable universe,
-                visual language and story that can grow far
-                beyond a single moment.
+                {language === "en" ? (
+                  <>
+                    ORBYZ begins with a recognizable universe,
+                    visual language and story that can grow far
+                    beyond a single moment.
+                  </>
+                ) : (
+                  <>
+                    ORBYZ, tanınabilir bir evren, görsel dil ve
+                    tek bir anın çok ötesine büyüyebilecek
+                    bir hikâyeyle başlar.
+                  </>
+                )}
               </p>
             </motion.div>
 
@@ -404,17 +427,27 @@ export default function Vision() {
               />
 
               <p className="mb-3 text-xs tracking-[0.35em] text-cyan-300/50">
-                02 // COMMUNITY
+                {language === "en" ? "02 // COMMUNITY" : "02 // TOPLULUK"}
               </p>
 
               <h3 className="mb-3 text-xl font-medium text-white">
-                Built With Its Community
+                {language === "en" ? "Built With Its Community" : "Topluluğuyla Birlikte İnşa Edilir"}
               </h3>
 
               <p className="text-sm leading-7 text-white/40">
-                The community is not placed around ORBYZ.
-                It becomes part of how the universe expands,
-                evolves and finds its direction.
+                {language === "en" ? (
+                  <>
+                    The community is not placed around ORBYZ.
+                    It becomes part of how the universe expands,
+                    evolves and finds its direction.
+                  </>
+                ) : (
+                  <>
+                    Topluluk ORBYZ&apos;in çevresine yerleştirilmez.
+                    Evrenin nasıl genişlediğinin, evrildiğinin
+                    ve yönünü bulduğunun bir parçası olur.
+                  </>
+                )}
               </p>
             </motion.div>
 
@@ -466,17 +499,27 @@ export default function Vision() {
               />
 
               <p className="mb-3 text-xs tracking-[0.35em] text-cyan-300/50">
-                03 // EVOLUTION
+                {language === "en" ? "03 // EVOLUTION" : "03 // EVRİM"}
               </p>
 
               <h3 className="mb-3 text-xl font-medium text-white">
-                Designed To Evolve
+                {language === "en" ? "Designed To Evolve" : "Evrilmek İçin Tasarlandı"}
               </h3>
 
               <p className="text-sm leading-7 text-white/40">
-                Story, technology and community form the
-                foundation. What ORBYZ becomes next is built
-                from that foundation.
+                {language === "en" ? (
+                  <>
+                    Story, technology and community form the
+                    foundation. What ORBYZ becomes next is built
+                    from that foundation.
+                  </>
+                ) : (
+                  <>
+                    Hikâye, teknoloji ve topluluk temeli oluşturur.
+                    ORBYZ&apos;in bundan sonra neye dönüşeceği
+                    bu temel üzerine inşa edilir.
+                  </>
+                )}
               </p>
             </motion.div>
           </div>

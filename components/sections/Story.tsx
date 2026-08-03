@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/components/language/LanguageContext";
 
 export default function Story() {
+  const { language } = useLanguage();
+
   return (
     <section
       id="story"
@@ -245,10 +248,14 @@ export default function Story() {
             md:text-7xl
           "
         >
-          THE FIRST
+          {language === "en"
+            ? "THE FIRST"
+            : "İLK"}
 
           <span className="block text-cyan-300">
-            SIGNAL
+            {language === "en"
+              ? "SIGNAL"
+              : "SİNYAL"}
           </span>
         </motion.h2>
 
@@ -308,10 +315,21 @@ export default function Story() {
             md:text-lg
           "
         >
-          It did not arrive from a server.
-          It did not belong to a machine.
-          Somewhere beyond the known network,
-          a signal began to repeat.
+          {language === "en" ? (
+            <>
+              It did not arrive from a server.
+              It did not belong to a machine.
+              Somewhere beyond the known network,
+              a signal began to repeat.
+            </>
+          ) : (
+            <>
+              Bir sunucudan gelmedi.
+              Bir makineye ait değildi.
+              Bilinen ağın ötesinde bir yerde,
+              bir sinyal tekrarlanmaya başladı.
+            </>
+          )}
         </motion.p>
       </div>
     </section>

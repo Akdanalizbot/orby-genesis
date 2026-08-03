@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import OrbiScene from "@/components/orb/OrbiScene";
+import { useLanguage } from "@/components/language/LanguageContext";
 
 export default function Orbi() {
+  const { language } = useLanguage();
+
   return (
     <section
       id="orbi"
@@ -200,7 +203,9 @@ export default function Orbi() {
               text-cyan-300/60
             "
           >
-            ORBI // THE OBSERVER
+            {language === "en"
+              ? "ORBI // THE OBSERVER"
+              : "ORBI // GÖZLEMCİ"}
           </motion.p>
 
           {/* Main Title */}
@@ -232,10 +237,14 @@ export default function Orbi() {
               lg:text-7xl
             "
           >
-            IT HEARD
+            {language === "en"
+              ? "IT HEARD"
+              : "SİNYALİ"}
 
             <span className="block text-cyan-300">
-              THE SIGNAL.
+              {language === "en"
+                ? "THE SIGNAL."
+                : "DUYDU."}
             </span>
           </motion.h2>
 
@@ -302,12 +311,22 @@ export default function Orbi() {
               lg:mx-0
             "
           >
-            <p>Not as data.</p>
+            <p>
+              {language === "en"
+                ? "Not as data."
+                : "Veri olarak değil."}
+            </p>
 
-            <p>Not as code.</p>
+            <p>
+              {language === "en"
+                ? "Not as code."
+                : "Kod olarak değil."}
+            </p>
 
             <p className="text-white/75">
-              But as something familiar.
+              {language === "en"
+                ? "But as something familiar."
+                : "Tanıdık bir şey olarak."}
             </p>
           </motion.div>
 
@@ -337,10 +356,21 @@ export default function Orbi() {
               lg:mx-0
             "
           >
-            Across the silence, ORBI listened.
-            The signal repeated.
-            And with every pulse, the distance
-            between observer and origin began to disappear.
+            {language === "en" ? (
+              <>
+                Across the silence, ORBI listened.
+                The signal repeated.
+                And with every pulse, the distance
+                between observer and origin began to disappear.
+              </>
+            ) : (
+              <>
+                Sessizliğin ötesinde ORBI dinledi.
+                Sinyal tekrarlandı.
+                Ve her darbeyle birlikte gözlemci ile
+                köken arasındaki mesafe kaybolmaya başladı.
+              </>
+            )}
           </motion.p>
         </div>
       </div>

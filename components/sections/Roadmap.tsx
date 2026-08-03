@@ -1,39 +1,74 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const phases = [
-  {
-    number: "01",
-    name: "GENESIS",
-    title: "The Universe Awakens",
-    description:
-      "The identity of ORBYZ takes form. ORBI emerges, the visual language is established, and the foundations of the universe are created.",
-  },
-  {
-    number: "02",
-    name: "SIGNAL",
-    title: "The Community Connects",
-    description:
-      "The signal spreads beyond its origin. Early explorers enter the universe, connect with its story, and begin shaping the community around ORBYZ.",
-  },
-  {
-    number: "03",
-    name: "EXPANSION",
-    title: "The Ecosystem Grows",
-    description:
-      "ORBYZ expands beyond its first boundaries. New experiences, ideas and layers begin connecting the universe into a growing digital ecosystem.",
-  },
-  {
-    number: "04",
-    name: "BEYOND",
-    title: "The Path Remains Open",
-    description:
-      "The future is not defined by a fixed destination. ORBYZ continues to evolve through its universe, technology and the community building within it.",
-  },
-];
+import { useLanguage } from "@/components/language/LanguageContext";
 
 export default function Roadmap() {
+  const { language } = useLanguage();
+
+  const phases =
+    language === "en"
+      ? [
+          {
+            number: "01",
+            name: "GENESIS",
+            title: "The Universe Awakens",
+            description:
+              "The identity of ORBYZ takes form. ORBI emerges, the visual language is established, and the foundations of the universe are created.",
+          },
+          {
+            number: "02",
+            name: "SIGNAL",
+            title: "The Community Connects",
+            description:
+              "The signal spreads beyond its origin. Early explorers enter the universe, connect with its story, and begin shaping the community around ORBYZ.",
+          },
+          {
+            number: "03",
+            name: "EXPANSION",
+            title: "The Ecosystem Grows",
+            description:
+              "ORBYZ expands beyond its first boundaries. New experiences, ideas and layers begin connecting the universe into a growing digital ecosystem.",
+          },
+          {
+            number: "04",
+            name: "BEYOND",
+            title: "The Path Remains Open",
+            description:
+              "The future is not defined by a fixed destination. ORBYZ continues to evolve through its universe, technology and the community building within it.",
+          },
+        ]
+      : [
+          {
+            number: "01",
+            name: "GENESIS",
+            title: "Evren Uyanıyor",
+            description:
+              "ORBYZ'in kimliği şekilleniyor. ORBI ortaya çıkıyor, görsel dil oluşturuluyor ve evrenin temelleri atılıyor.",
+          },
+          {
+            number: "02",
+            name: "SİNYAL",
+            title: "Topluluk Bağlanıyor",
+            description:
+              "Sinyal kökeninin ötesine yayılıyor. İlk kaşifler evrene giriyor, hikâyesiyle bağ kuruyor ve ORBYZ çevresindeki topluluğu şekillendirmeye başlıyor.",
+          },
+          {
+            number: "03",
+            name: "GENİŞLEME",
+            title: "Ekosistem Büyüyor",
+            description:
+              "ORBYZ ilk sınırlarının ötesine genişliyor. Yeni deneyimler, fikirler ve katmanlar evreni büyüyen bir dijital ekosisteme dönüştürmeye başlıyor.",
+          },
+          {
+            number: "04",
+            name: "ÖTESİ",
+            title: "Yol Açık Kalıyor",
+            description:
+              "Gelecek sabit bir varış noktasıyla tanımlanmıyor. ORBYZ; evreni, teknolojisi ve içinde gelişen topluluğuyla evrilmeye devam ediyor.",
+          },
+        ];
+
   return (
     <section
       id="roadmap"
@@ -128,10 +163,10 @@ export default function Roadmap() {
             md:text-7xl
           "
         >
-          THE PATH OF
+          {language === "en" ? "THE PATH OF" : "EVRİMİN"}
 
           <span className="block text-cyan-300">
-            EVOLUTION.
+            {language === "en" ? "EVOLUTION." : "YOLU."}
           </span>
         </motion.h2>
 
@@ -159,9 +194,19 @@ export default function Roadmap() {
             md:text-lg
           "
         >
-          ORBYZ is not built around deadlines.
-          It evolves through stages — each one expanding
-          the universe beyond what came before.
+          {language === "en" ? (
+            <>
+              ORBYZ is not built around deadlines.
+              It evolves through stages — each one expanding
+              the universe beyond what came before.
+            </>
+          ) : (
+            <>
+              ORBYZ son tarihler etrafında inşa edilmez.
+              Aşamalar boyunca evrilir — her aşama evreni
+              kendinden öncekinin ötesine taşır.
+            </>
+          )}
         </motion.p>
       </div>
 
@@ -469,7 +514,9 @@ export default function Roadmap() {
             text-white/20
           "
         >
-          THE PATH CONTINUES
+          {language === "en"
+            ? "THE PATH CONTINUES"
+            : "YOL DEVAM EDİYOR"}
         </motion.p>
       </div>
     </section>

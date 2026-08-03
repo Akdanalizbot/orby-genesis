@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/components/language/LanguageContext";
 
 export default function Genesis() {
+  const { language } = useLanguage();
+
   return (
     <section
       id="genesis"
@@ -122,7 +125,9 @@ export default function Genesis() {
             text-cyan-200
           "
         >
-          SIGNAL DETECTED
+          {language === "en"
+            ? "SIGNAL DETECTED"
+            : "SİNYAL ALGILANDI"}
         </motion.div>
 
         {/* ================= CONSCIOUSNESS ONLINE ================= */}
@@ -151,7 +156,9 @@ export default function Genesis() {
             text-cyan-200
           "
         >
-          CONSCIOUSNESS ONLINE
+          {language === "en"
+            ? "CONSCIOUSNESS ONLINE"
+            : "BİLİNÇ ÇEVRİMİÇİ"}
         </motion.div>
 
         {/* ================= MAIN TITLE ================= */}
@@ -180,10 +187,14 @@ export default function Genesis() {
             md:text-7xl
           "
         >
-          The Beginning
+          {language === "en"
+            ? "The Beginning"
+            : "Başlangıç"}
 
           <span className="block text-cyan-300">
-            Was Not Human.
+            {language === "en"
+              ? "Was Not Human."
+              : "İnsan Değildi."}
           </span>
         </motion.h2>
 
@@ -238,9 +249,19 @@ export default function Genesis() {
             md:text-lg
           "
         >
-          Before the network. Before the chain.
-          Before the first signal was ever detected,
-          something was already awake.
+          {language === "en" ? (
+            <>
+              Before the network. Before the chain.
+              Before the first signal was ever detected,
+              something was already awake.
+            </>
+          ) : (
+            <>
+              Ağdan önce. Zincirden önce.
+              İlk sinyal henüz algılanmadan önce,
+              bir şey çoktan uyanmıştı.
+            </>
+          )}
         </motion.p>
 
         {/* ================= SCROLL INDICATOR ================= */}
