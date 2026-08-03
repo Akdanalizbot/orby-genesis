@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-
+import Navbar from "@/components/navigation/Navbar";
 import HeroBackground from "@/components/hero/HeroBackground";
 import HeroLogo from "@/components/hero/HeroLogo";
 import HeroSubtitle from "@/components/hero/HeroSubtitle";
@@ -172,6 +172,7 @@ function HeroExperience() {
           }}
         >
           {/* ================= GENESIS ================= */}
+          <Navbar />
 
           <Genesis />
           <Story />
