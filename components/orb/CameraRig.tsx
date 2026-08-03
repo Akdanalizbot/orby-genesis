@@ -1,7 +1,7 @@
 "use client";
 
 import { useFrame, useThree } from "@react-three/fiber";
-import { MathUtils } from "three";
+import { MathUtils, PerspectiveCamera } from "three";
 import { usePortal } from "@/components/transitions/PortalContext";
 
 export default function CameraRig() {
@@ -12,7 +12,7 @@ export default function CameraRig() {
     // Mouse hareketi
     // Biraz daha belirgin ama hâlâ yumuşak
     const targetX = pointer.x * 0.45;
-    const targetY = pointer.y * 0.30;
+    const targetY = pointer.y * 0.3;
 
     camera.position.x = MathUtils.lerp(
       camera.position.x,
@@ -36,13 +36,16 @@ export default function CameraRig() {
     );
 
     // Portal sırasında çok hafif FOV değişimi
-    camera.fov = MathUtils.lerp(
-      camera.fov,
-      35 - progress * 3,
-      0.05
-    );
+    // Sadece PerspectiveCamera kullanıldığında çalışır
+    if (camera instanceof PerspectiveCamera) {
+      camera.fov = MathUtils.lerp(
+        camera.fov,
+        35 - progress * 3,
+        0.05
+      );
 
-    camera.updateProjectionMatrix();
+      camera.updateProjectionMatrix();
+    }
 
     // Kamera her zaman ORBI merkezine baksın
     camera.lookAt(0, 0, 0);

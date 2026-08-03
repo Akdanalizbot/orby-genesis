@@ -18,6 +18,8 @@ type PortalContextType = {
 
   chapterOneActive: boolean;
   setChapterOneActive: Dispatch<SetStateAction<boolean>>;
+
+  resetPortal: () => void;
 };
 
 const PortalContext = createContext<PortalContextType | null>(null);
@@ -33,6 +35,17 @@ export function PortalProvider({
 
   const [chapterOneActive, setChapterOneActive] = useState(false);
 
+  const resetPortal = () => {
+    setProgress(0);
+    setGenesisActive(false);
+    setChapterOneActive(false);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <PortalContext.Provider
       value={{
@@ -44,6 +57,8 @@ export function PortalProvider({
 
         chapterOneActive,
         setChapterOneActive,
+
+        resetPortal,
       }}
     >
       {children}
