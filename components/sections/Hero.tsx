@@ -20,6 +20,7 @@ import {
 import Genesis from "@/components/sections/Genesis";
 import Story from "@/components/sections/Story";
 import Orbi from "@/components/sections/Orbi";
+import Universe from "@/components/sections/Universe";
 
 /* =========================================================
    HERO EXPERIENCE
@@ -173,6 +174,7 @@ function HeroExperience() {
           <Genesis />
           <Story />
           <Orbi />
+          <Universe />
 
           {/* 
             Bundan sonra ana site bölümleri buraya gelecek.
