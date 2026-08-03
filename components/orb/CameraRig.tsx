@@ -10,11 +10,21 @@ export default function CameraRig() {
 
   useFrame(() => {
     // Mouse hareketi
-    const targetX = pointer.x * 0.18;
-    const targetY = pointer.y * 0.12;
+    // Biraz daha belirgin ama hâlâ yumuşak
+    const targetX = pointer.x * 0.45;
+    const targetY = pointer.y * 0.30;
 
-    camera.position.x = MathUtils.lerp(camera.position.x, targetX, 0.05);
-    camera.position.y = MathUtils.lerp(camera.position.y, targetY, 0.05);
+    camera.position.x = MathUtils.lerp(
+      camera.position.x,
+      targetX,
+      0.08
+    );
+
+    camera.position.y = MathUtils.lerp(
+      camera.position.y,
+      targetY,
+      0.08
+    );
 
     // Portal açılırken hafif yaklaş
     const targetZ = 4 - progress * 0.4;
@@ -25,7 +35,7 @@ export default function CameraRig() {
       0.05
     );
 
-    // Çok hafif FOV değişimi
+    // Portal sırasında çok hafif FOV değişimi
     camera.fov = MathUtils.lerp(
       camera.fov,
       35 - progress * 3,
@@ -34,6 +44,7 @@ export default function CameraRig() {
 
     camera.updateProjectionMatrix();
 
+    // Kamera her zaman ORBI merkezine baksın
     camera.lookAt(0, 0, 0);
   });
 
