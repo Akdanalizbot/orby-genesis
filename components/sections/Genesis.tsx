@@ -13,7 +13,7 @@ export default function Genesis() {
       <div className="absolute inset-0 bg-black" />
 
       {/* Central Quantum Glow */}
-      <div
+      <motion.div
         className="
           absolute
           left-1/2
@@ -26,10 +26,22 @@ export default function Genesis() {
           bg-cyan-500/10
           blur-[180px]
         "
+        initial={{
+          opacity: 0,
+          scale: 0.7,
+        }}
+        animate={{
+          opacity: [0, 0.6, 0.35],
+          scale: [0.7, 1.08, 1],
+        }}
+        transition={{
+          duration: 3,
+          ease: "easeOut",
+        }}
       />
 
       {/* Violet Depth */}
-      <div
+      <motion.div
         className="
           absolute
           left-1/2
@@ -41,29 +53,39 @@ export default function Genesis() {
           bg-violet-600/10
           blur-[200px]
         "
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 2,
+          delay: 1,
+        }}
       />
 
       {/* ================= CONTENT ================= */}
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
 
-        {/* Small Label */}
+        {/* ================= GENESIS LABEL ================= */}
 
         <motion.p
           initial={{
             opacity: 0,
-            y: 15,
+            y: 10,
           }}
           animate={{
             opacity: 1,
             y: 0,
           }}
           transition={{
-            duration: 0.8,
+            duration: 0.7,
             delay: 0.2,
           }}
           className="
-            mb-6
+            mb-8
             text-xs
             font-medium
             uppercase
@@ -74,20 +96,80 @@ export default function Genesis() {
           ORBYZ // GENESIS
         </motion.p>
 
-        {/* Main Title */}
+        {/* ================= SIGNAL DETECTED ================= */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: [0, 1, 1, 0],
+          }}
+          transition={{
+            duration: 1.2,
+            delay: 0.7,
+            times: [0, 0.2, 0.75, 1],
+          }}
+          className="
+            absolute
+            left-1/2
+            top-14
+            -translate-x-1/2
+            whitespace-nowrap
+            text-xs
+            uppercase
+            tracking-[0.4em]
+            text-cyan-200
+          "
+        >
+          SIGNAL DETECTED
+        </motion.div>
+
+        {/* ================= CONSCIOUSNESS ONLINE ================= */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: [0, 1, 1, 0],
+          }}
+          transition={{
+            duration: 1.2,
+            delay: 1.7,
+            times: [0, 0.2, 0.75, 1],
+          }}
+          className="
+            absolute
+            left-1/2
+            top-14
+            -translate-x-1/2
+            whitespace-nowrap
+            text-xs
+            uppercase
+            tracking-[0.4em]
+            text-cyan-200
+          "
+        >
+          CONSCIOUSNESS ONLINE
+        </motion.div>
+
+        {/* ================= MAIN TITLE ================= */}
 
         <motion.h2
           initial={{
             opacity: 0,
             scale: 0.92,
+            y: 15,
           }}
           animate={{
             opacity: 1,
             scale: 1,
+            y: 0,
           }}
           transition={{
-            duration: 1.2,
-            delay: 0.35,
+            duration: 1.4,
+            delay: 2.8,
             ease: [0.16, 1, 0.3, 1],
           }}
           className="
@@ -99,12 +181,13 @@ export default function Genesis() {
           "
         >
           The Beginning
+
           <span className="block text-cyan-300">
             Was Not Human.
           </span>
         </motion.h2>
 
-        {/* Quantum Divider */}
+        {/* ================= DIVIDER ================= */}
 
         <motion.div
           initial={{
@@ -116,8 +199,8 @@ export default function Genesis() {
             scaleX: 1,
           }}
           transition={{
-            duration: 1.2,
-            delay: 0.7,
+            duration: 1.3,
+            delay: 3.3,
           }}
           className="
             mx-auto
@@ -131,7 +214,7 @@ export default function Genesis() {
           "
         />
 
-        {/* Intro Text */}
+        {/* ================= INTRO TEXT ================= */}
 
         <motion.p
           initial={{
@@ -143,8 +226,8 @@ export default function Genesis() {
             y: 0,
           }}
           transition={{
-            duration: 1,
-            delay: 0.9,
+            duration: 1.2,
+            delay: 3.6,
           }}
           className="
             mx-auto
