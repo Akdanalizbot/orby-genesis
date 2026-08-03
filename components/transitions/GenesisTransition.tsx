@@ -1,10 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { usePortal } from "./PortalContext";
 
 export default function GenesisTransition() {
-  const { progress } = usePortal();
+  const {
+    progress,
+    genesisActive,
+    setGenesisActive,
+  } = usePortal();
+
+  const triggered = useRef(false);
 
   // Geçiş portalın son %15'inde başlasın
   const transitionProgress = Math.max(
@@ -12,8 +19,46 @@ export default function GenesisTransition() {
     Math.min(1, (progress - 0.85) / 0.15)
   );
 
+  /*
+   * Portal tamamen açıldığında Genesis'i
+   * yalnızca BİR KEZ aktif et.
+   */
+  useEffect(() => {
+    console.log("PORTAL PROGRESS:", progress);
+
+    if (
+      progress >= 0.99 &&
+      !triggered.current &&
+      !genesisActive
+    ) {
+      triggered.current = true;
+
+      console.log("GENESIS TRIGGERED");
+
+      // Flash'ın görünmesi için kısa bekleme
+      window.setTimeout(() => {
+        console.log("GENESIS ACTIVATING");
+
+        setGenesisActive(true);
+      }, 250);
+    }
+  }, [
+    progress,
+    genesisActive,
+    setGenesisActive,
+  ]);
+
+  /*
+   * Genesis aktif olduktan sonra
+   * transition katmanını tamamen kaldır.
+   */
+  if (genesisActive) {
+    return null;
+  }
+
   return (
     <div className="pointer-events-none absolute inset-0 z-40 overflow-hidden">
+
       {/* ================= QUANTUM FLASH ================= */}
 
       <motion.div

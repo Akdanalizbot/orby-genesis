@@ -6,7 +6,7 @@ export default function Genesis() {
   return (
     <section
       id="genesis"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black px-6"
+      className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-black px-6"
     >
       {/* ================= BACKGROUND ================= */}
 
@@ -46,6 +46,7 @@ export default function Genesis() {
       {/* ================= CONTENT ================= */}
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
+
         {/* Small Label */}
 
         <motion.p
@@ -53,15 +54,13 @@ export default function Genesis() {
             opacity: 0,
             y: 15,
           }}
-          whileInView={{
+          animate={{
             opacity: 1,
             y: 0,
           }}
-          viewport={{
-            once: true,
-          }}
           transition={{
-            duration: 1,
+            duration: 0.8,
+            delay: 0.2,
           }}
           className="
             mb-6
@@ -82,15 +81,13 @@ export default function Genesis() {
             opacity: 0,
             scale: 0.92,
           }}
-          whileInView={{
+          animate={{
             opacity: 1,
             scale: 1,
           }}
-          viewport={{
-            once: true,
-          }}
           transition={{
-            duration: 1.4,
+            duration: 1.2,
+            delay: 0.35,
             ease: [0.16, 1, 0.3, 1],
           }}
           className="
@@ -114,16 +111,13 @@ export default function Genesis() {
             opacity: 0,
             scaleX: 0,
           }}
-          whileInView={{
+          animate={{
             opacity: 1,
             scaleX: 1,
           }}
-          viewport={{
-            once: true,
-          }}
           transition={{
-            duration: 1.5,
-            delay: 0.4,
+            duration: 1.2,
+            delay: 0.7,
           }}
           className="
             mx-auto
@@ -144,16 +138,13 @@ export default function Genesis() {
             opacity: 0,
             y: 20,
           }}
-          whileInView={{
+          animate={{
             opacity: 1,
             y: 0,
           }}
-          viewport={{
-            once: true,
-          }}
           transition={{
-            duration: 1.2,
-            delay: 0.6,
+            duration: 1,
+            delay: 0.9,
           }}
           className="
             mx-auto

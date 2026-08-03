@@ -12,6 +12,9 @@ import {
 type PortalContextType = {
   progress: number;
   setProgress: Dispatch<SetStateAction<number>>;
+
+  genesisActive: boolean;
+  setGenesisActive: Dispatch<SetStateAction<boolean>>;
 };
 
 const PortalContext = createContext<PortalContextType | null>(null);
@@ -21,13 +24,19 @@ export function PortalProvider({
 }: {
   children: ReactNode;
 }) {
+  // Portal scroll progress
   const [progress, setProgress] = useState(0);
+
+  // Genesis yalnızca portal tamamlandığında aktif olacak
+  const [genesisActive, setGenesisActive] = useState(false);
 
   return (
     <PortalContext.Provider
       value={{
         progress,
         setProgress,
+        genesisActive,
+        setGenesisActive,
       }}
     >
       {children}

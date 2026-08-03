@@ -3,8 +3,20 @@
 import { motion } from "framer-motion";
 
 export default function HeroCTA() {
+  const enterOrbyz = () => {
+    window.dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key: "Enter",
+        code: "Enter",
+        bubbles: true,
+      })
+    );
+  };
+
   return (
     <motion.button
+      type="button"
+      onClick={enterOrbyz}
       initial={{
         opacity: 0,
         y: 20,
@@ -19,25 +31,25 @@ export default function HeroCTA() {
         ease: [0.22, 1, 0.36, 1],
       }}
       className="
-      group
-      mt-10
-      rounded-full
-      border
-      border-cyan-400/20
-      bg-white/5
-      px-8
-      py-3
-      text-sm
-      uppercase
-      tracking-[0.35em]
-      text-white
-      backdrop-blur-xl
-      transition-all
-      duration-500
-      hover:scale-105
-      hover:border-cyan-300/60
-      hover:bg-cyan-400/10
-      hover:shadow-[0_0_40px_rgba(34,211,238,.35)]
+        group
+        mt-10
+        rounded-full
+        border
+        border-cyan-400/20
+        bg-white/5
+        px-8
+        py-3
+        text-sm
+        uppercase
+        tracking-[0.35em]
+        text-white
+        backdrop-blur-xl
+        transition-all
+        duration-500
+        hover:scale-105
+        hover:border-cyan-300/60
+        hover:bg-cyan-400/10
+        hover:shadow-[0_0_40px_rgba(34,211,238,.35)]
       "
     >
       ENTER ORBYZ
