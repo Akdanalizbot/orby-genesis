@@ -18,14 +18,17 @@ import {
 } from "@/components/transitions/PortalContext";
 
 import Genesis from "@/components/sections/Genesis";
+import ChapterOne from "@/components/genesis/ChapterOne";
 
 /* =========================================================
    HERO EXPERIENCE
 ========================================================= */
 
 function HeroExperience() {
-  const { genesisActive } = usePortal();
-  console.log("GENESIS ACTIVE:", genesisActive);
+  const {
+    genesisActive,
+    chapterOneActive,
+  } = usePortal();
 
   return (
     <section className="relative h-screen overflow-hidden bg-black">
@@ -133,8 +136,8 @@ function HeroExperience() {
           GENESIS
       ===================================================== */}
 
-      <AnimatePresence>
-        {genesisActive && (
+      <AnimatePresence mode="wait">
+        {genesisActive && !chapterOneActive && (
           <motion.div
             key="genesis"
             className="absolute inset-0 z-30"
@@ -144,12 +147,41 @@ function HeroExperience() {
             animate={{
               opacity: 1,
             }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+          >
+            <Genesis />
+          </motion.div>
+        )}
+
+        {/* =================================================
+            CHAPTER I
+        ================================================= */}
+
+        {chapterOneActive && (
+          <motion.div
+            key="chapter-one"
+            className="absolute inset-0 z-30"
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
             transition={{
               duration: 1.2,
               ease: "easeOut",
             }}
           >
-            <Genesis />
+            <ChapterOne />
           </motion.div>
         )}
       </AnimatePresence>

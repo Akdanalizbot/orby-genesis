@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { usePortal } from "@/components/transitions/PortalContext";
 
 export default function Genesis() {
+  const { setChapterOneActive } = usePortal();
+
   return (
     <section
       id="genesis"
@@ -242,6 +245,49 @@ export default function Genesis() {
           Before the first signal was ever detected,
           something was already awake.
         </motion.p>
+
+        {/* ================= CONTINUE ================= */}
+
+        <motion.button
+          type="button"
+          onClick={() => setChapterOneActive(true)}
+          initial={{
+            opacity: 0,
+            y: 15,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+            delay: 4.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="
+            mt-12
+            rounded-full
+            border
+            border-cyan-400/20
+            bg-white/5
+            px-8
+            py-3
+            text-xs
+            uppercase
+            tracking-[0.4em]
+            text-white/70
+            backdrop-blur-xl
+            transition-all
+            duration-500
+            hover:scale-105
+            hover:border-cyan-300/60
+            hover:bg-cyan-400/10
+            hover:text-white
+            hover:shadow-[0_0_40px_rgba(34,211,238,.25)]
+          "
+        >
+          CONTINUE
+        </motion.button>
       </div>
     </section>
   );
