@@ -2,20 +2,22 @@
 
 import { motion } from "framer-motion";
 
-export default function ChapterOne() {
+export default function Story() {
   return (
-    <section className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-black px-6">
-
+    <section
+      id="story"
+      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-6 py-24"
+    >
       {/* ================= BACKGROUND ================= */}
 
       <div className="absolute inset-0 bg-black" />
 
-      {/* Deep Cyan Atmosphere */}
-      <motion.div
+      {/* Cyan Atmosphere */}
+      <div
         className="
           absolute
           left-1/2
-          top-[35%]
+          top-[45%]
           h-[700px]
           w-[700px]
           -translate-x-1/2
@@ -24,22 +26,10 @@ export default function ChapterOne() {
           bg-cyan-500/10
           blur-[190px]
         "
-        initial={{
-          opacity: 0,
-          scale: 0.6,
-        }}
-        animate={{
-          opacity: 0.45,
-          scale: 1,
-        }}
-        transition={{
-          duration: 2.5,
-          ease: "easeOut",
-        }}
       />
 
       {/* Violet Depth */}
-      <motion.div
+      <div
         className="
           absolute
           left-1/2
@@ -51,103 +41,81 @@ export default function ChapterOne() {
           bg-violet-600/10
           blur-[220px]
         "
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 3,
-          delay: 0.5,
-        }}
       />
 
-      {/* ================= SIGNAL SYSTEM ================= */}
+      {/* ================= SIGNAL ================= */}
 
-      <motion.div
+      <div
         className="
           absolute
           left-1/2
-          top-[25%]
+          top-[27%]
           z-10
-          h-[220px]
-          w-[220px]
+          h-[200px]
+          w-[200px]
           -translate-x-1/2
           -translate-y-1/2
         "
-        initial={{
-          opacity: 0,
-          scale: 0.7,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.5,
-          ease: [0.16, 1, 0.3, 1],
-        }}
       >
-        {/* Signal Ring 1 */}
+        {/* Ring 1 */}
         <motion.div
           className="
             absolute
             left-1/2
             top-1/2
-            h-[90px]
-            w-[90px]
+            h-[80px]
+            w-[80px]
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
             border
-            border-cyan-200/50
+            border-cyan-200/40
           "
           animate={{
             opacity: [0, 0.8, 0],
-            scale: [0.35, 1.5, 2.4],
+            scale: [0.4, 1.5, 2.5],
           }}
           transition={{
-            duration: 2.8,
+            duration: 3,
             repeat: Infinity,
             ease: "easeOut",
           }}
         />
 
-        {/* Signal Ring 2 */}
+        {/* Ring 2 */}
         <motion.div
           className="
             absolute
             left-1/2
             top-1/2
-            h-[90px]
-            w-[90px]
+            h-[80px]
+            w-[80px]
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
             border
-            border-cyan-300/35
+            border-cyan-300/30
           "
           animate={{
             opacity: [0, 0.7, 0],
-            scale: [0.35, 1.5, 2.4],
+            scale: [0.4, 1.5, 2.5],
           }}
           transition={{
-            duration: 2.8,
-            delay: 0.9,
+            duration: 3,
+            delay: 1,
             repeat: Infinity,
             ease: "easeOut",
           }}
         />
 
-        {/* Signal Ring 3 */}
+        {/* Ring 3 */}
         <motion.div
           className="
             absolute
             left-1/2
             top-1/2
-            h-[90px]
-            w-[90px]
+            h-[80px]
+            w-[80px]
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
@@ -155,18 +123,18 @@ export default function ChapterOne() {
             border-cyan-300/20
           "
           animate={{
-            opacity: [0, 0.55, 0],
-            scale: [0.35, 1.5, 2.4],
+            opacity: [0, 0.6, 0],
+            scale: [0.4, 1.5, 2.5],
           }}
           transition={{
-            duration: 2.8,
-            delay: 1.8,
+            duration: 3,
+            delay: 2,
             repeat: Infinity,
             ease: "easeOut",
           }}
         />
 
-        {/* Inner Halo */}
+        {/* Core Glow */}
         <motion.div
           className="
             absolute
@@ -182,41 +150,16 @@ export default function ChapterOne() {
           "
           animate={{
             opacity: [0.25, 0.8, 0.25],
-            scale: [0.8, 1.35, 0.8],
+            scale: [0.8, 1.4, 0.8],
           }}
           transition={{
-            duration: 1.6,
+            duration: 1.8,
             repeat: Infinity,
             ease: "easeInOut",
           }}
         />
 
-        {/* Signal Core Glow */}
-        <motion.div
-          className="
-            absolute
-            left-1/2
-            top-1/2
-            h-10
-            w-10
-            -translate-x-1/2
-            -translate-y-1/2
-            rounded-full
-            bg-cyan-300/20
-            blur-xl
-          "
-          animate={{
-            opacity: [0.4, 1, 0.4],
-            scale: [0.8, 1.8, 0.8],
-          }}
-          transition={{
-            duration: 1.6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        {/* Signal Core */}
+        {/* Core */}
         <motion.div
           className="
             absolute
@@ -232,41 +175,36 @@ export default function ChapterOne() {
           "
           animate={{
             scale: [0.8, 1.5, 0.8],
-            opacity: [0.65, 1, 0.65],
+            opacity: [0.6, 1, 0.6],
           }}
           transition={{
-            duration: 1.6,
+            duration: 1.8,
             repeat: Infinity,
             ease: "easeInOut",
           }}
         />
-      </motion.div>
+      </div>
 
       {/* ================= CONTENT ================= */}
 
-      <div
-        className="
-          relative
-          z-20
-          mx-auto
-          mt-[180px]
-          max-w-4xl
-          text-center
-        "
-      >
-        {/* Chapter Label */}
+      <div className="relative z-20 mx-auto mt-[180px] max-w-4xl text-center">
+
+        {/* Label */}
         <motion.p
           initial={{
             opacity: 0,
-            y: 10,
+            y: 15,
           }}
-          animate={{
+          whileInView={{
             opacity: 1,
             y: 0,
           }}
+          viewport={{
+            once: true,
+            amount: 0.5,
+          }}
           transition={{
             duration: 0.8,
-            delay: 0.5,
           }}
           className="
             mb-5
@@ -276,24 +214,27 @@ export default function ChapterOne() {
             text-cyan-300/60
           "
         >
-          CHAPTER I
+          ORBYZ // ORIGIN
         </motion.p>
 
         {/* Title */}
         <motion.h2
           initial={{
             opacity: 0,
-            y: 20,
+            y: 25,
             scale: 0.96,
           }}
-          animate={{
+          whileInView={{
             opacity: 1,
             y: 0,
             scale: 1,
           }}
+          viewport={{
+            once: true,
+            amount: 0.5,
+          }}
           transition={{
-            duration: 1.3,
-            delay: 0.9,
+            duration: 1.2,
             ease: [0.16, 1, 0.3, 1],
           }}
           className="
@@ -305,6 +246,7 @@ export default function ChapterOne() {
           "
         >
           THE FIRST
+
           <span className="block text-cyan-300">
             SIGNAL
           </span>
@@ -316,17 +258,20 @@ export default function ChapterOne() {
             opacity: 0,
             scaleX: 0,
           }}
-          animate={{
+          whileInView={{
             opacity: 1,
             scaleX: 1,
           }}
+          viewport={{
+            once: true,
+          }}
           transition={{
             duration: 1.2,
-            delay: 1.4,
+            delay: 0.2,
           }}
           className="
             mx-auto
-            my-7
+            my-8
             h-px
             w-32
             bg-gradient-to-r
@@ -342,13 +287,17 @@ export default function ChapterOne() {
             opacity: 0,
             y: 20,
           }}
-          animate={{
+          whileInView={{
             opacity: 1,
             y: 0,
           }}
+          viewport={{
+            once: true,
+            amount: 0.4,
+          }}
           transition={{
             duration: 1.2,
-            delay: 1.7,
+            delay: 0.3,
           }}
           className="
             mx-auto

@@ -1,11 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { usePortal } from "@/components/transitions/PortalContext";
 
 export default function Genesis() {
-  const { setChapterOneActive } = usePortal();
-
   return (
     <section
       id="genesis"
@@ -246,48 +243,44 @@ export default function Genesis() {
           something was already awake.
         </motion.p>
 
-        {/* ================= CONTINUE ================= */}
+        {/* ================= SCROLL INDICATOR ================= */}
 
-        <motion.button
-          type="button"
-          onClick={() => setChapterOneActive(true)}
+        <motion.div
           initial={{
             opacity: 0,
-            y: 15,
           }}
           animate={{
-            opacity: 1,
-            y: 0,
+            opacity: 0.5,
           }}
           transition={{
             duration: 1,
-            delay: 4.8,
-            ease: [0.22, 1, 0.36, 1],
+            delay: 5,
           }}
           className="
-            mt-12
-            rounded-full
-            border
-            border-cyan-400/20
-            bg-white/5
-            px-8
-            py-3
-            text-xs
-            uppercase
-            tracking-[0.4em]
-            text-white/70
-            backdrop-blur-xl
-            transition-all
-            duration-500
-            hover:scale-105
-            hover:border-cyan-300/60
-            hover:bg-cyan-400/10
-            hover:text-white
-            hover:shadow-[0_0_40px_rgba(34,211,238,.25)]
+            absolute
+            left-1/2
+            top-[calc(100%+70px)]
+            -translate-x-1/2
           "
         >
-          CONTINUE
-        </motion.button>
+          <motion.div
+            animate={{
+              y: [0, 8, 0],
+            }}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="
+              h-10
+              w-px
+              bg-gradient-to-b
+              from-cyan-300/70
+              to-transparent
+            "
+          />
+        </motion.div>
       </div>
     </section>
   );

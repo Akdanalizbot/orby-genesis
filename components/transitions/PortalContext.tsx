@@ -27,13 +27,10 @@ export function PortalProvider({
 }: {
   children: ReactNode;
 }) {
-  // Portal progress
   const [progress, setProgress] = useState(0);
 
-  // Portal tamamlandığında Genesis aktif olur
   const [genesisActive, setGenesisActive] = useState(false);
 
-  // Genesis içindeki CONTINUE ile Chapter I aktif olur
   const [chapterOneActive, setChapterOneActive] = useState(false);
 
   return (
