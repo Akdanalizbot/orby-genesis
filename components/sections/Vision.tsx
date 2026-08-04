@@ -141,7 +141,7 @@ export default function Vision() {
               text-cyan-300/60
             "
           >
-            MARDYZ // VISION
+            MORDYZ // VISION
           </motion.p>
 
           {/* Main Title */}
@@ -249,14 +249,14 @@ export default function Vision() {
           >
             {language === "en" ? (
               <>
-                MARDYZ is built as a universe before it becomes
+                MORDYZ is built as a universe before it becomes
                 an ecosystem. A world with identity, story and
                 purpose — shaped over time by the community
                 that enters it.
               </>
             ) : (
               <>
-                MARDYZ bir ekosistem olmadan önce bir evren olarak
+                MORDYZ bir ekosistem olmadan önce bir evren olarak
                 inşa edilir. Kimliği, hikâyesi ve amacı olan bir dünya —
                 zaman içinde ona katılan topluluk tarafından şekillenir.
               </>
@@ -365,13 +365,13 @@ export default function Vision() {
               <p className="text-sm leading-7 text-white/40">
                 {language === "en" ? (
                   <>
-                    MARDYZ begins with a recognizable universe,
+                    MORDYZ begins with a recognizable universe,
                     visual language and story that can grow far
                     beyond a single moment.
                   </>
                 ) : (
                   <>
-                    MARDYZ, tanınabilir bir evren, görsel dil ve
+                    MORDYZ, tanınabilir bir evren, görsel dil ve
                     tek bir anın çok ötesine büyüyebilecek
                     bir hikâyeyle başlar.
                   </>
@@ -437,13 +437,13 @@ export default function Vision() {
               <p className="text-sm leading-7 text-white/40">
                 {language === "en" ? (
                   <>
-                    The community is not placed around MARDYZ.
+                    The community is not placed around MORDYZ.
                     It becomes part of how the universe expands,
                     evolves and finds its direction.
                   </>
                 ) : (
                   <>
-                    Topluluk MARDYZ&apos;in çevresine yerleştirilmez.
+                    Topluluk MORDYZ&apos;in çevresine yerleştirilmez.
                     Evrenin nasıl genişlediğinin, evrildiğinin
                     ve yönünü bulduğunun bir parçası olur.
                   </>
