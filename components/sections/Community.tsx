@@ -303,7 +303,7 @@ export default function Community() {
             text-cyan-300/60
           "
         >
-          MARDYZ // COMMUNITY
+          MORDYZ // COMMUNITY
         </motion.p>
 
         {/* Main Title */}
@@ -406,14 +406,14 @@ export default function Community() {
         >
           {language === "en" ? (
             <>
-              MARDYZ is not built for an audience.
+              MORDYZ is not built for an audience.
               It is built with a community.
               Every voice, every idea and every explorer
               becomes part of the universe as it evolves.
             </>
           ) : (
             <>
-              MARDYZ bir izleyici kitlesi için inşa edilmez.
+              MORDYZ bir izleyici kitlesi için inşa edilmez.
               Bir toplulukla birlikte inşa edilir.
               Her ses, her fikir ve her kaşif,
               evren geliştikçe onun bir parçası olur.
