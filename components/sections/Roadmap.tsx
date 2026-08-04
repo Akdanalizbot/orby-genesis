@@ -58,14 +58,14 @@ export default function Roadmap() {
             name: "GENİŞLEME",
             title: "Ekosistem Büyüyor",
             description:
-              "MARDYZ ilk sınırlarının ötesine genişliyor. Yeni deneyimler, fikirler ve katmanlar evreni büyüyen bir dijital ekosisteme dönüştürmeye başlıyor.",
+              "MORDYZ ilk sınırlarının ötesine genişliyor. Yeni deneyimler, fikirler ve katmanlar evreni büyüyen bir dijital ekosisteme dönüştürmeye başlıyor.",
           },
           {
             number: "04",
             name: "ÖTESİ",
             title: "Yol Açık Kalıyor",
             description:
-              "Gelecek sabit bir varış noktasıyla tanımlanmıyor. MARDYZ; evreni, teknolojisi ve içinde gelişen topluluğuyla evrilmeye devam ediyor.",
+              "Gelecek sabit bir varış noktasıyla tanımlanmıyor. MORDYZ; evreni, teknolojisi ve içinde gelişen topluluğuyla evrilmeye devam ediyor.",
           },
         ];
 
@@ -136,7 +136,7 @@ export default function Roadmap() {
             text-cyan-300/60
           "
         >
-          MARDYZ // EVOLUTION
+          MORDYZ // EVOLUTION
         </motion.p>
 
         <motion.h2
