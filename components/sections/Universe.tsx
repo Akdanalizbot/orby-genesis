@@ -234,7 +234,7 @@ export default function Universe() {
             text-cyan-300/60
           "
         >
-          ORBYZ // UNIVERSE
+          MARDYZ // UNIVERSE
         </motion.p>
 
         {/* Title */}
@@ -334,14 +334,14 @@ export default function Universe() {
         >
           {language === "en" ? (
             <>
-              ORBYZ is more than a signal, a character,
+              MARDYZ is more than a signal, a character,
               or a point on a network. It is a growing digital
               universe shaped by story, community and
               the worlds that emerge between them.
             </>
           ) : (
             <>
-              ORBYZ bir sinyalden, bir karakterden veya
+              MARDYZ bir sinyalden, bir karakterden veya
               bir ağ üzerindeki noktadan daha fazlasıdır.
               Hikâye, topluluk ve onların arasında doğan
               dünyalarla şekillenen, büyüyen dijital bir evrendir.

@@ -6,7 +6,7 @@ import { useLanguage } from "@/components/language/LanguageContext";
 export default function HeroCTA() {
   const { language } = useLanguage();
 
-  const enterOrbyz = () => {
+  const enterMardyz = () => {
     window.dispatchEvent(
       new KeyboardEvent("keydown", {
         key: "Enter",
@@ -19,7 +19,7 @@ export default function HeroCTA() {
   return (
     <motion.button
       type="button"
-      onClick={enterOrbyz}
+      onClick={enterMardyz}
       initial={{
         opacity: 0,
         y: 20,
@@ -55,7 +55,7 @@ export default function HeroCTA() {
         hover:shadow-[0_0_40px_rgba(34,211,238,.35)]
       "
     >
-      {language === "en" ? "ENTER ORBYZ" : "ORBYZ'E GİR"}
+      {language === "en" ? "ENTER MARDYZ" : "MARDYZ'E GİR"}
     </motion.button>
   );
 }

@@ -95,7 +95,7 @@ export default function Footer() {
               hover:text-cyan-300
             "
           >
-            ORBYZ
+            MARDYZ
           </button>
 
           <p
@@ -162,7 +162,7 @@ export default function Footer() {
           "
         >
           <p>
-            © {year} ORBYZ
+            © {year} MARDYZ
           </p>
 
           <p className="mt-2">

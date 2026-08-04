@@ -93,15 +93,15 @@ export default function Navbar() {
             md:px-6
           "
         >
-          {/* ================= ORBYZ / HOME ================= */}
+          {/* ================= MARDYZ / HOME ================= */}
 
           <a
             href="#"
             onClick={returnToEnter}
             aria-label={
               language === "en"
-                ? "Return to ENTER ORBYZ"
-                : "ENTER ORBYZ ekranına dön"
+                ? "Return to ENTER MARDYZ"
+                : "ENTER MARDYZ ekranına dön"
             }
             className="
               relative
@@ -115,7 +115,7 @@ export default function Navbar() {
               hover:text-cyan-300
             "
           >
-            ORBYZ
+            MARDYZ
           </a>
 
           {/* ================= DESKTOP NAVIGATION ================= */}

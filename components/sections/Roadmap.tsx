@@ -14,28 +14,28 @@ export default function Roadmap() {
             name: "GENESIS",
             title: "The Universe Awakens",
             description:
-              "The identity of ORBYZ takes form. ORBI emerges, the visual language is established, and the foundations of the universe are created.",
+              "The identity of MARDYZ takes form. ORBI emerges, the visual language is established, and the foundations of the universe are created.",
           },
           {
             number: "02",
             name: "SIGNAL",
             title: "The Community Connects",
             description:
-              "The signal spreads beyond its origin. Early explorers enter the universe, connect with its story, and begin shaping the community around ORBYZ.",
+              "The signal spreads beyond its origin. Early explorers enter the universe, connect with its story, and begin shaping the community around MARDYZ.",
           },
           {
             number: "03",
             name: "EXPANSION",
             title: "The Ecosystem Grows",
             description:
-              "ORBYZ expands beyond its first boundaries. New experiences, ideas and layers begin connecting the universe into a growing digital ecosystem.",
+              "MARDYZ expands beyond its first boundaries. New experiences, ideas and layers begin connecting the universe into a growing digital ecosystem.",
           },
           {
             number: "04",
             name: "BEYOND",
             title: "The Path Remains Open",
             description:
-              "The future is not defined by a fixed destination. ORBYZ continues to evolve through its universe, technology and the community building within it.",
+              "The future is not defined by a fixed destination. MARDYZ continues to evolve through its universe, technology and the community building within it.",
           },
         ]
       : [
@@ -44,28 +44,28 @@ export default function Roadmap() {
             name: "GENESIS",
             title: "Evren Uyanıyor",
             description:
-              "ORBYZ'in kimliği şekilleniyor. ORBI ortaya çıkıyor, görsel dil oluşturuluyor ve evrenin temelleri atılıyor.",
+              "MARDYZ'in kimliği şekilleniyor. ORBI ortaya çıkıyor, görsel dil oluşturuluyor ve evrenin temelleri atılıyor.",
           },
           {
             number: "02",
             name: "SİNYAL",
             title: "Topluluk Bağlanıyor",
             description:
-              "Sinyal kökeninin ötesine yayılıyor. İlk kaşifler evrene giriyor, hikâyesiyle bağ kuruyor ve ORBYZ çevresindeki topluluğu şekillendirmeye başlıyor.",
+              "Sinyal kökeninin ötesine yayılıyor. İlk kaşifler evrene giriyor, hikâyesiyle bağ kuruyor ve MARDYZ çevresindeki topluluğu şekillendirmeye başlıyor.",
           },
           {
             number: "03",
             name: "GENİŞLEME",
             title: "Ekosistem Büyüyor",
             description:
-              "ORBYZ ilk sınırlarının ötesine genişliyor. Yeni deneyimler, fikirler ve katmanlar evreni büyüyen bir dijital ekosisteme dönüştürmeye başlıyor.",
+              "MARDYZ ilk sınırlarının ötesine genişliyor. Yeni deneyimler, fikirler ve katmanlar evreni büyüyen bir dijital ekosisteme dönüştürmeye başlıyor.",
           },
           {
             number: "04",
             name: "ÖTESİ",
             title: "Yol Açık Kalıyor",
             description:
-              "Gelecek sabit bir varış noktasıyla tanımlanmıyor. ORBYZ; evreni, teknolojisi ve içinde gelişen topluluğuyla evrilmeye devam ediyor.",
+              "Gelecek sabit bir varış noktasıyla tanımlanmıyor. MARDYZ; evreni, teknolojisi ve içinde gelişen topluluğuyla evrilmeye devam ediyor.",
           },
         ];
 
@@ -136,7 +136,7 @@ export default function Roadmap() {
             text-cyan-300/60
           "
         >
-          ORBYZ // EVOLUTION
+          MARDYZ // EVOLUTION
         </motion.p>
 
         <motion.h2
@@ -196,13 +196,13 @@ export default function Roadmap() {
         >
           {language === "en" ? (
             <>
-              ORBYZ is not built around deadlines.
+              MARDYZ is not built around deadlines.
               It evolves through stages — each one expanding
               the universe beyond what came before.
             </>
           ) : (
             <>
-              ORBYZ son tarihler etrafında inşa edilmez.
+              MARDYZ son tarihler etrafında inşa edilmez.
               Aşamalar boyunca evrilir — her aşama evreni
               kendinden öncekinin ötesine taşır.
             </>

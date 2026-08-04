@@ -141,7 +141,7 @@ export default function Vision() {
               text-cyan-300/60
             "
           >
-            ORBYZ // VISION
+            MARDYZ // VISION
           </motion.p>
 
           {/* Main Title */}
@@ -249,14 +249,14 @@ export default function Vision() {
           >
             {language === "en" ? (
               <>
-                ORBYZ is built as a universe before it becomes
+                MARDYZ is built as a universe before it becomes
                 an ecosystem. A world with identity, story and
                 purpose — shaped over time by the community
                 that enters it.
               </>
             ) : (
               <>
-                ORBYZ bir ekosistem olmadan önce bir evren olarak
+                MARDYZ bir ekosistem olmadan önce bir evren olarak
                 inşa edilir. Kimliği, hikâyesi ve amacı olan bir dünya —
                 zaman içinde ona katılan topluluk tarafından şekillenir.
               </>
@@ -365,13 +365,13 @@ export default function Vision() {
               <p className="text-sm leading-7 text-white/40">
                 {language === "en" ? (
                   <>
-                    ORBYZ begins with a recognizable universe,
+                    MARDYZ begins with a recognizable universe,
                     visual language and story that can grow far
                     beyond a single moment.
                   </>
                 ) : (
                   <>
-                    ORBYZ, tanınabilir bir evren, görsel dil ve
+                    MARDYZ, tanınabilir bir evren, görsel dil ve
                     tek bir anın çok ötesine büyüyebilecek
                     bir hikâyeyle başlar.
                   </>
@@ -437,13 +437,13 @@ export default function Vision() {
               <p className="text-sm leading-7 text-white/40">
                 {language === "en" ? (
                   <>
-                    The community is not placed around ORBYZ.
+                    The community is not placed around MARDYZ.
                     It becomes part of how the universe expands,
                     evolves and finds its direction.
                   </>
                 ) : (
                   <>
-                    Topluluk ORBYZ&apos;in çevresine yerleştirilmez.
+                    Topluluk MARDYZ&apos;in çevresine yerleştirilmez.
                     Evrenin nasıl genişlediğinin, evrildiğinin
                     ve yönünü bulduğunun bir parçası olur.
                   </>
@@ -510,13 +510,13 @@ export default function Vision() {
                 {language === "en" ? (
                   <>
                     Story, technology and community form the
-                    foundation. What ORBYZ becomes next is built
+                    foundation. What MARDYZ becomes next is built
                     from that foundation.
                   </>
                 ) : (
                   <>
                     Hikâye, teknoloji ve topluluk temeli oluşturur.
-                    ORBYZ&apos;in bundan sonra neye dönüşeceği
+                    MARDYZ&apos;in bundan sonra neye dönüşeceği
                     bu temel üzerine inşa edilir.
                   </>
                 )}

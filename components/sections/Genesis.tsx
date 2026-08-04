@@ -96,7 +96,7 @@ export default function Genesis() {
             text-cyan-300/70
           "
         >
-          ORBYZ // GENESIS
+          MARDYZ // GENESIS
         </motion.p>
 
         {/* ================= SIGNAL DETECTED ================= */}
