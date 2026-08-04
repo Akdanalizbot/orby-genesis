@@ -35,7 +35,7 @@ export default function Roadmap() {
             name: "BEYOND",
             title: "The Path Remains Open",
             description:
-              "The future is not defined by a fixed destination. MARDYZ continues to evolve through its universe, technology and the community building within it.",
+              "The future is not defined by a fixed destination. MORDYZ continues to evolve through its universe, technology and the community building within it.",
           },
         ]
       : [
@@ -44,14 +44,14 @@ export default function Roadmap() {
             name: "GENESIS",
             title: "Evren Uyanıyor",
             description:
-              "MARDYZ'in kimliği şekilleniyor. ORBI ortaya çıkıyor, görsel dil oluşturuluyor ve evrenin temelleri atılıyor.",
+              "MORDYZ'in kimliği şekilleniyor. ORBI ortaya çıkıyor, görsel dil oluşturuluyor ve evrenin temelleri atılıyor.",
           },
           {
             number: "02",
             name: "SİNYAL",
             title: "Topluluk Bağlanıyor",
             description:
-              "Sinyal kökeninin ötesine yayılıyor. İlk kaşifler evrene giriyor, hikâyesiyle bağ kuruyor ve MARDYZ çevresindeki topluluğu şekillendirmeye başlıyor.",
+              "Sinyal kökeninin ötesine yayılıyor. İlk kaşifler evrene giriyor, hikâyesiyle bağ kuruyor ve MORDYZ çevresindeki topluluğu şekillendirmeye başlıyor.",
           },
           {
             number: "03",
