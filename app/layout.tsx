@@ -14,17 +14,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "MARDYZ — The Universe Is Awakening",
-    template: "%s | MARDYZ",
+    default: "MORDYZ — The Universe Is Awakening",
+    template: "%s | MORDYZ",
   },
 
   description:
-    "Enter MARDYZ — a growing digital universe shaped by story, identity, community and evolution.",
+    "Enter MORDYZ — a growing digital universe shaped by story, identity, community and evolution.",
 
-  applicationName: "MARDYZ",
+  applicationName: "MORDYZ",
 
   keywords: [
-    "MARDYZ",
+    "MORDYZ",
     "ORBI",
     "digital universe",
     "Web3",
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "MARDYZ",
+      name: "MORDYZ",
     },
   ],
 
-  creator: "MARDYZ",
-  publisher: "MARDYZ",
+  creator: "MORDYZ",
+  publisher: "MORDYZ",
 
   robots: {
     index: true,
@@ -56,17 +56,17 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    siteName: "MARDYZ",
-    title: "MARDYZ — The Universe Is Awakening",
+    siteName: "MORDYZ",
+    title: "MORDYZ — The Universe Is Awakening",
     description:
-      "Enter MARDYZ — a growing digital universe shaped by story, identity, community and evolution.",
+      "Enter MORDYZ — a growing digital universe shaped by story, identity, community and evolution.",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "MARDYZ — The Universe Is Awakening",
+    title: "MORDYZ — The Universe Is Awakening",
     description:
-      "Enter MARDYZ — a growing digital universe shaped by story, identity, community and evolution.",
+      "Enter MORDYZ — a growing digital universe shaped by story, identity, community and evolution.",
   },
 
   category: "technology",
