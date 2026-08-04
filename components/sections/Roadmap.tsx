@@ -14,21 +14,21 @@ export default function Roadmap() {
             name: "GENESIS",
             title: "The Universe Awakens",
             description:
-              "The identity of MARDYZ takes form. ORBI emerges, the visual language is established, and the foundations of the universe are created.",
+              "The identity of MORDYZ takes form. ORBI emerges, the visual language is established, and the foundations of the universe are created.",
           },
           {
             number: "02",
             name: "SIGNAL",
             title: "The Community Connects",
             description:
-              "The signal spreads beyond its origin. Early explorers enter the universe, connect with its story, and begin shaping the community around MARDYZ.",
+              "The signal spreads beyond its origin. Early explorers enter the universe, connect with its story, and begin shaping the community around MORDYZ.",
           },
           {
             number: "03",
             name: "EXPANSION",
             title: "The Ecosystem Grows",
             description:
-              "MARDYZ expands beyond its first boundaries. New experiences, ideas and layers begin connecting the universe into a growing digital ecosystem.",
+              "MORDYZ expands beyond its first boundaries. New experiences, ideas and layers begin connecting the universe into a growing digital ecosystem.",
           },
           {
             number: "04",
