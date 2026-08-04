@@ -510,13 +510,13 @@ export default function Vision() {
                 {language === "en" ? (
                   <>
                     Story, technology and community form the
-                    foundation. What MARDYZ becomes next is built
+                    foundation. What MORDYZ becomes next is built
                     from that foundation.
                   </>
                 ) : (
                   <>
                     Hikâye, teknoloji ve topluluk temeli oluşturur.
-                    MARDYZ&apos;in bundan sonra neye dönüşeceği
+                    MORDYZ&apos;in bundan sonra neye dönüşeceği
                     bu temel üzerine inşa edilir.
                   </>
                 )}
