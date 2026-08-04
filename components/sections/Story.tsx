@@ -217,7 +217,7 @@ export default function Story() {
             text-cyan-300/60
           "
         >
-          MARDYZ // ORIGIN
+          MORDYZ // ORIGIN
         </motion.p>
 
         {/* Title */}
