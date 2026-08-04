@@ -196,13 +196,13 @@ export default function Roadmap() {
         >
           {language === "en" ? (
             <>
-              MARDYZ is not built around deadlines.
+              MORDYZ is not built around deadlines.
               It evolves through stages — each one expanding
               the universe beyond what came before.
             </>
           ) : (
             <>
-              MARDYZ son tarihler etrafında inşa edilmez.
+              MORDYZ son tarihler etrafında inşa edilmez.
               Aşamalar boyunca evrilir — her aşama evreni
               kendinden öncekinin ötesine taşır.
             </>
