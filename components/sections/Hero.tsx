@@ -168,12 +168,12 @@ function HeroExperience() {
       </AnimatePresence>
 
       {/* =====================================================
-          Mardyz MAIN SITE
+          Mordyz MAIN SITE
       ===================================================== */}
 
       {genesisActive && (
         <motion.div
-          key="Mardyz-main"
+          key="Mordyz-main"
           initial={{
             opacity: 0,
           }}
